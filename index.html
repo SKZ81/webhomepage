@@ -9,7 +9,7 @@
     <meta name="author" content="Johann Cahier">
     <link rel="icon" href="images/favicon.png">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Johann CAHIER - Ingénieur Développement Système &amp; Embarqué</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,34 +57,136 @@
 
     <div class="container">
 
-        <div class="container">
+        <div>
             <div class="col-md-2 container starter-template">
                 Aug. 2013 until now
                 <img class="img-responsive" src="images/wyplay-logo-2011_400x400.png">
             </div>
             <div class="col-md-10 container">
                 <h2> Ingénieur développement logiciel at Wyplay (Marseille, France)</h2>
-                <h3> Context </h3>
-<a href="http://www.mundo-r.com/gl">R Mundo</a> is a Spannish Digital TV cable operator in Galicia.
-<a href="http://www.technicolor.com/">Technicolor</a> was the project architect and integrator. They designed the hardware around a ST-micro SoC, 7141, which is basically the same SoC used by canal+ in their DDT STBs -- plus a "cable TCP/IP" (DOCSIS) interface.
-
-
-                <p>
-Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat, Augustum actus eius exaggerando creberrime docens, idque, incertum qua mente, ne lateret adfectans. quibus mox Caesar acrius efferatus, velut contumaciae quoddam vexillum altius erigens, sine respectu salutis alienae vel suae ad vertenda opposita instar rapidi fluminis irrevocabili impetu ferebatur.
+                <h3> About Wyplay </h3>
+                <p> From <a href="http://www.wyplay.com/?page=at-a-glance">wyplay website</a> :
+                    <div class="quote">
+                        <blockquote>
+                            Wyplay was founded in 2006 with the vision that the new emerging media over Internet and home connected devices would completely disrupt the TV ecosystem status quo and that most operators didn't have the right tools to address these new convergence trends and new challengers in a timely manner.
+                            Based on this vision, the company developed an open, modular and innovative software solution to answer the operator's convergence challenges.
+                            Wyplay has since insured the success of the most demanding Tier1 operators including SFR, Vodafone, Proximus, Canal+, Sky Italia & DishTV.
+                        </blockquote>
+                    </div>
                 </p>
+                <h3> Realisations : </h3>
+                <ul>
+                    <li> Main Developper / Team Leader / Integrator for the DCI804RMU's STEP2 MiddleWare </li>
+                    <li> Contributions to <a href="https://frogbywyplay.com/"><b>Frog</b></a> (<b><i>NB</i></b> : the term "Frog" is namely a <i>commercial offer</i> by Wyplay, but internally, speaking between developpers, it refers to the <i>generic software</i> on which the offer is based) </li>
+                    <li> FileSystem permission checking sytem, against hardening constraints from <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.htmle">Cisco</a>, for <a href="http://www.sky.it/">Sky Italia</a> product </li>
+                </ul>
+                <h3> "Ether" Step 2 : A middleware for DCI804RMU, a SetTopBox from Technicolor for R-Mundo</h3>
+                <ul>
+                    <li><a href="http://www.mundo-r.com/gl">R Mundo</a> is a Spannish Digital TV cable operator in Galicia.</li>
+                    <li><a href="http://www.technicolor.com/">Technicolor</a> was the project architect and integrator. They designed the hardware around an :
+                    <li><A href="http://www.st.com">ST-micro</a> 7141, which is nearly the same SoC than the <a href="http://www.st.com/content/st_com/en/products/digital-set-top-box-ics/legacy-products/legacy-processors/sti7105.html">sti 7105
+                    </a>, used by Canal+ in some of thier their DDT&amp;SAT STBs... Plus an <i>ad-hoc</i> "cable TCP/IP" (DOCSIS) interface.</li>
+                    <li><a href="http:/www.cinfo.es/">CInfo</a> was the User Interface/Application desgner and developper</li>
+                    <li>And <a href="http://www.wyplay.com/fr/">Wyplay</a> was providing the middleware for this board.
+                    As the SoC was very close to the sti7105 used in Canal+ DTT STBs, many generic development done for the former operator could be back-ported in this project.
+
+                </ul>
+                <p>
+                    <h4> Realisations </h4>
+                    <p>
+                        <ul>
+                            <li> Main Features Developement :
+                            <ul>
+                                <b> DVB : </b>
+                                <li> Service Plan update on-the-stream : permanent, cyclic, DVB scan implementation, with customer/project <u>very</u> specific, (but challenging) constrainsts and requests </li>
+                                <li> DVB scan / update : test automation bench integrated in jenkins. this is a complex bench, outside the skills of the validation team, as it needed :
+                                <ul>
+                                    <li> to setup a streamer host from various pieces of hardware, including a Dektec PCI card </li>
+                                    <li> to drive remotly the the DVB streamer  </li>
+                                    <li> while simulating calls from application to the middleware (to clean service plan / start scan / get results). </li>
+                                    <li> and only then, compare the actual results to expected ones </li>
+                                    <li> Jenkins integration, but it was not the <i>hot-point</i> </li>
+                                </ul>
+                                <li> EPG access time optimisation (integrated in Frog, generic product) </li>
+                                <li> BAT Update Notifications to application </li>
+                                <b> Security : </b>
+                                <li> Control Access System integration validation (implied new developments/fixes) </li>
+                                <li> System hardening for NASC (Nagra) complience </li>
+                            </ul>
+                            </li>
+                            <li> Integration / Tweaking :
+                            <ul>
+                                <li> HDCP and macrovision integration</li>
+                                <li> Frog alignment : continuous-integration of latest generic components version, where possible </li>
+                                <li> </li>
+                            </ul>
+                            </li>
+
+                        </ul>
+                    </p>
+                    <h4> Responsabilities </h4>
+                    <p> Beyond my job as a developper/integrator, I also :
+                    <ul>
+                        <li> Animated a small team during about 6 month (March 2013 - September 2013), </li>
+                        <li> Been the internal and external technical referent for this project during the overall development timeline, </li>
+                        <li> And even sometimes the only proactive element... </li>
+                    </ul>
+                </p>
+                <p>
+                </p>
+
             </div>
         </div>
 
-        <div class="container">
+        <div>
             <div class="col-md-2 container starter-template">
                 Apr. 2006 - Oct 2009
-                <div class="col-md-2 container
                 <img class="img-responsive" src="images/Logo_ALTEN.jpg">
             </div>
             <div class="col-md-10 container">
-                <h2> Ingénieur d'Etudes at Alten (Rennes, France)</h2>
+                <h2> Ingénieur d'&#x00C9;tudes at Alten (Rennes, France)</h2>
+                <h3> Alten Rennes's Software Developmet Center </h3>
                 <p>
-Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat, Augustum actus eius exaggerando creberrime docens, idque, incertum qua mente, ne lateret adfectans. quibus mox Caesar acrius efferatus, velut contumaciae quoddam vexillum altius erigens, sine respectu salutis alienae vel suae ad vertenda opposita instar rapidi fluminis irrevocabili impetu ferebatur.
+                The <b>S.D.C.</b> was a division of Alten Rennes, which was aimed to provide a comptetive service, compared to Alcatel's indian subsidiaries. The argument was :
+                    <ul>
+                        <li>Same langage (French) for a better communication</li>
+                        <li>Geographic Proximty (Rennes to Nantes)</li>
+                        <li>Talented but cheap engineering team, by employing mainly young people, newly graduated</li>
+                        <li>Reducing overall project cost and shrinking delays by improved efficiency</li>
+                    </ul>
+                </p>
+                </p>
+                <h3> Context </h3>
+                <p>
+                Open Service Platform of Alcatel is a multi-blade server technology, powered by Solaris. Its role is to manage the classical commutated telephone network, to implement what is called the Intelligent Network. It allow valuable services far way beyond reaching the receipient of a voice call (which is the basic task of <a href="">PTSN</a> and does not imply I.N.).
+                For instance, Flexible Routing and Charging (FRC) service allows a victim of a break down on the motorway, to call a special number (nationally unique) from its mobile and reach the nearest <b>&lt;b&gt;&lt;YourBrand&gt;&lt;/b&gt;</b> Automobile Technical Center, that is open, and having room for this customer.
+
+                A rescue vehicule is alread gone !
+                </p>
+                <p>
+<a href="http://alcatel-lucent.com/wps/portal/!ut/p/kcxml/04_Sj9SPykssy0xPLMnMz0vM0Y_QjzKLd4w3MfQFSYGYRq6m-pEoYgbxjgiRIH1vfV-P_NxU_QD9gtzQiHJHR0UAAD_zXg!!/delta/base64xml/L0lJayEvUUd3QndJQSEvNElVRkNBISEvNl9BXzNBRC9lbl93dw!!?LMSG_CABINET=Solution_Product_Catalog&LMSG_CONTENT_FILE=Products/Product_Detail_000439.xml">ECN</a> was another Intelligent Network service, dedicated at first to companies that spread around multiple locations but wanted to take advantage of the benefits of on-site PABX, like short numbers to reach another corporate, spreading across all site of the corporation.
+It now allows fixe/mobile convergence (corporate people can seamlessly initiate a short-number call from their mobile phone, off-site : this is because the service can be triggered as soon as the user pick up the phone ! It also allows the corporate user to manage its own mobility, setup call routing (<i>e.g.</i> to office, mobile, home or voicemail) from a public web interface (obv. using authentication).
+                </p>
+                <h3> Realisatons </h3>
+                <p>
+                    <ul>
+                        <li>
+<b>France Télécom Ticket Téléphone : </b> The goal was to develop an intelligent service allowing pre-paid phone card, usable from any public phone, or even private phone. By calling a free number, the customer could charge a call on his account from any phone, and could recharge his account by buying vouchers, in various shop. The service was designed to be deplayed in North Africa (mainly Marrocco) by France Télécom.
+
+This project was a chance for a ramp-up training of the whole SDC. It allowed Junior Developpers to make thier hands on the toolchain, and for seniors it was a chance to organise the service, but the developpement was finely driven by alcatel. It was also the first occasion to deliver a software to Alcatel's validation team.
+                        </li>
+                        <li>
+<b>Community Mobilty Manager : </b> Is the ancestror of <b>ECN</b>. The aim was to port batches of C++ modules from SPARC32 to SPARC64 to allow migration of services on a new technology servers. Some modules were as easy to port as clicking a button, some were tricky as hell (for short : port code mixing int* and long* from 32 to 64 bit arch. It still works ? Try changing endians.)
+                        </li>
+                        <li>
+<b>CSTA Session Manager :</b> Is the first project on which I took a real lead, by designing the software architecture in UML.
+I first used a free software to design 
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
                 </p>
             </div>
         </div>
