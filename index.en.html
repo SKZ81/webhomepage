@@ -14,6 +14,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="css/languages.min.css" rel="stylesheet">
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
@@ -54,7 +56,10 @@
             <li class="active"><a href="#">C.V.</a></li>
             <li><a href="about_me.en.html">About Me</a></li>
             <li><a href="around_the_web.en.html">Around the Web</a></li>
-            <li><a href="contact.en.html">Contact</a></li>
+            <!-- li><a href="contact.en.html">Contact</a></li -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.fr.html"><span class="lang-sm lang-lbl" lang="fr"></span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -79,39 +84,39 @@
                         </blockquote>
                     </div>
                 </p>
-                <h3> Realisations : </h3>
+                <h3> Achievements : </h3>
                 <ul>
-                    <li> My main realisations in Wyplay were achieved during <b><i>Ether Step 2</i></b> project in which is was alternatively (sometimes simultaneously) : Main Developper / Team Leader / Integrator for the DCI804RMU's STEP2 MiddleWare (more details below), </li>
+                    <li><b><i>Ether Step 2</i></b> project in which I was alternatively (and even sometimes, simultaneously) : Main Developper / Team Leader / Integrator... The project aim was to deliver a <b>middleware</b> for the DCI804RMU's Set Top Box (please read more details below), </li>
                     <li> Contributions to <a href="https://frogbywyplay.com/">Frog</a> (<b><i>NB</i></b> : the term "Frog" is namely a <i>commercial offer</i> by Wyplay, but internally speaking, it also refers to the <i>generic software base</i>),</li>
-                    <li> System Hardening : automatic file permissions checking sytem, against hardening constraints from <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.htmle">Cisco</a>, for <a href="http://www.sky.it/">Sky Italia</a> product. </li>
+                    <li> System Hardening : automatic file permissions checking sytem, against hardening requirements from <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.htmle">Cisco</a>, for <a href="http://www.sky.it/">Sky Italia</a> product. </li>
                 </ul>
-                <h3> "Ether" Step 2 : A middleware for DCI804RMU, a SetTopBox from Technicolor for R-Mundo</h3>
+                <h3> "Ether" Step 2 : A <b>middleware</b> for DCI804RMU, a SetTopBox from Technicolor for R-Mundo</h3>
                 <ul>
                     <li><a href="http://www.mundo-r.com/gl">R Mundo</a> is a Spannish Digital TV cable operator in Galicia,</li>
                     <li><a href="http://www.technicolor.com/">Technicolor</a> was the project architect and integrator. They designed the hardware around an :
                     <li><a href="http://www.st.com">ST-micro</a> <b>7141</b>, which is nearly the same SoC than the <a href="http://www.st.com/content/st_com/en/products/digital-set-top-box-ics/legacy-products/legacy-processors/sti7105.html">sti 7105
                     </a>, used by Canal+ in some of thier their DDT&amp;SAT STBs... Plus an <i>ad-hoc</i> "cable TCP/IP" (DOCSIS) interface,</li>
-                    <li><a href="http:/www.cinfo.es/">CInfo</a> was the User Interface/Application desgner and developper,</li>
-                    <li>And <a href="http://www.wyplay.com/fr/">Wyplay</a> was providing the middleware for this board.</li>
+                    <li><a href="https://dtv.nagra.com/secure/casdrm">Nagra</a> was the provider for the CAS (control Access System for pay TV / ciphering)</li>
+                    <li><a href="http:/www.cinfo.es/">CInfo</a> was the User Interface/Application designer and developper,</li>
+                    <li>And <a href="http://www.wyplay.com/fr/">Wyplay</a> was providing the <b>middleware</b> for this board.</li>
                 </ul>
 
-                <p>As the SoC was very close to the sti7105 used in Canal+ DTT STBs, many generic development done for the former operator could be back-ported in this project.</p>
+                <p>As the SoC was very close to the sti7105 used in Canal+ STBs, some generic development/bugfixes for SH4 architecture done for the former operator could be back-ported in this project.</p>
 
                 <p>
-                    <h4> Realisations </h4>
+                    <h4> Achievements </h4>
                     <p>
                         <ul>
-                            <li> Main Features Developement :
+                            <li> Features Developement :
                             <ul>
                                 <b> DVB : </b>
-                                <li> Service Plan update on-the-stream : permanent, cyclic, DVB scan implementation, with <u>very</u> specific (and challenging) customer constrainsts and requests </li>
+                                <li> Service Plan update on-the-stream : permanent, cyclic, DVB scan implementation, with <u>very</u> specific customer constrainsts (as a cable operator masterize his network)</li>
                                 <li> DVB scan / update : test automation bench integrated in <a href="https://jenkins.io/">Jenkins</a>. this is a complex bench, outside the skills of the validation team, as it needed :
                                 <ul>
-                                    <li> to setup a streamer host from various pieces of hardware, including a Dektec PCI card </li>
-                                    <li> to drive remotly the the DVB streamer  </li>
-                                    <li> while simulating calls from application to the middleware (to clean service plan / start scan / get results). </li>
-                                    <li> and only then, compare the actual results to expected ones </li>
-                                    <li> Jenkins integration, but it was not the <i>hot-point</i> </li>
+                                    <li> to setup a DVB/MPEG streamer host from various pieces of hardware, including a Dektec PCI card </li>
+                                    <li> to drive remotly the the streamer  </li>
+                                    <li> while simulating calls from application to the <b>middleware</b> (to clean service plan / start scan / get results). </li>
+                                    <li> and only then, compare the actual results to expected ones, through Jenkins integration (but it was not really the <i>hot-point</i>) </li>
                                 </ul>
                                 <li> EPG access time optimisation (integrated in <a href="https://frogbywyplay.com/">Frog</a>, generic product) </li>
                                 <li> BAT Update Notifications to application </li>
@@ -122,7 +127,7 @@
                             </li>
                             <li> Integration / Tweaking :
                             <ul>
-                                <li> HDCP and macrovision integration</li>
+                                <li> HDCP and macrovision integration (copy protection on video outputs)</li>
                                 <li> "Frog alignment" : <i>i.e.</i> continuous-integration of latest generic components version, when/where possible </li>
                             </ul>
                             </li>
@@ -139,7 +144,6 @@
                     <ul>
                         <li> Animated a small team during about 6 month (March 2014 - September 2014), </li>
                         <li> Been the internal and external technical referent for this project during the overall development timeline, </li>
-                        <li> And even sometimes been the only "proactive" element driving the project... </li>
                     </ul>
                 </p>
                 <p>
@@ -168,8 +172,8 @@
                 </p>
                 <h3> Context </h3>
                 <p>
-                Open Service Platform of Alcatel is a multi-blade server technology, powered by Solaris. Its role is to manage the classical commutated telephone network, to implement what is called the Intelligent Network. It allow valuable services far way beyond reaching the receipient of a voice call (which is the basic task of <a href="https://en.wikipedia.org/wiki/Public_switched_telephone_network">PTSN</a> and does not imply I.N.).
-                For instance, Flexible Routing and Charging (FRC) service allows a victim of a break down on the motorway, to call a special number (nationally unique) from its mobile and reach the nearest <b>&lt;b&gt;&lt;YourBrand&gt;&lt;/b&gt;</b> Automobile Technical Center, that is open, and having room for this customer.
+                Open Service Platform of Alcatel is a multi-blade server technology, powered by Solaris. Its role is to manage the classical commutated telephone network, to implement what is called the Intelligent Network. It allow valuable services far way beyond reaching the receipient of a voice call (which is the basic task of <a href="https://en.wikipedia.org/wiki/Public_switched_telephone_network">PTSN</a> and does not imply I.N.).</p>
+                <p>For instance, Flexible Routing and Charging (FRC) service allows a victim of a break down on the motorway, to call a special number (nationally unique for a given Automobile Brand) from its mobile and reach the nearest Technical Center, that is open, and having room for this customer.
 
                 A rescue vehicule is already gone !
                 </p>
@@ -177,13 +181,13 @@
 <a href="http://alcatel-lucent.com/wps/portal/!ut/p/kcxml/04_Sj9SPykssy0xPLMnMz0vM0Y_QjzKLd4w3MfQFSYGYRq6m-pEoYgbxjgiRIH1vfV-P_NxU_QD9gtzQiHJHR0UAAD_zXg!!/delta/base64xml/L0lJayEvUUd3QndJQSEvNElVRkNBISEvNl9BXzNBRC9lbl93dw!!?LMSG_CABINET=Solution_Product_Catalog&LMSG_CONTENT_FILE=Products/Product_Detail_000439.xml">ECN</a> was another Intelligent Network service, dedicated at first to companies that spread around multiple locations but wanted to take advantage of the benefits of on-site PABX, like short numbers to reach another corporate, spreading across all site of the corporation.
 It now allows fixe/mobile convergence (corporate people can seamlessly initiate a short-number call from their mobile phone, off-site : this is because the service can be triggered as soon as the user pick up the phone ! It also allows the corporate user to manage its own mobility, setup call routing (<i>e.g.</i> to office, mobile, home or voicemail) from a public web interface (obv. using authentication).
                 </p>
-                <h3> Realisatons </h3>
+                <h3> Achievements </h3>
                 <p>
                     <ul>
                         <li>
 <b>France Télécom Ticket Téléphone : </b> The goal was to develop an intelligent service allowing pre-paid phone card, usable from any public phone, or even private phone. By calling a free number, the customer could charge a call on his account from any phone, and could recharge his account by buying vouchers, in various shop. The service was designed to be deplayed in North Africa (mainly Marrocco) by France Télécom.
 
-This project was a chance for a ramp-up training of the whole SDC. It allowed Junior Developpers to make thier hands on the toolchain, and for seniors it was a chance to organise the service, but the developpement was finely driven by alcatel. It was also the first occasion to deliver a software to Alcatel's validation team.
+This project was a chance for a ramp-up training of the early SDC. It allowed Junior Developpers to make thier hands on the toolchain, and for seniors it was a chance to organise the service, but the developpement was finely driven by alcatel. It was also the first occasion to deliver a software to Alcatel's validation team.
                         </li>
                         <li>
 <b>Community Mobilty Manager : </b> Is the ancestror of <b>ECN</b>. The aim was to port batches of C++ modules from SPARC32 to SPARC64 to allow migration of services on a new technology servers. Some modules were as easy to port as clicking a button, some were tricky as hell (for short : port code mixing int* and long* from 32 to 64 bit arch. It still works ? Try changing endians.)
