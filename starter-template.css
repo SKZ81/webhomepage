@@ -5,3 +5,40 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+
+.project-details {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: #E0E0E0;
+}
+
+.project-details-container {
+  padding-left: 20px;
+}
+
+h3.project-details-title {
+  margin-top: 0px;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 90%;
+        height: 900px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
