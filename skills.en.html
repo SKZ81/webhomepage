@@ -40,30 +40,13 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Johann CAHIER</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="cv.en.html">C.V.</a></li>
-            <li class="active"><a href="#">Skills</a></li>
-            <li><a href="about_me.en.html">About Me</a></li>
-            <li><a href="around_the_web.en.html">Around the Web</a></li>            
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="skills.fr.html"><span class="lang-sm lang-lbl" lang="fr"></span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    <div id=navbar></div> <!-- placeholder -->
 
     <div class="container">
-    
+
 
     <!-- ENTER PAGE CONTENT HERE .......... -->
-    
+
     </div>
 
 
@@ -75,13 +58,14 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    
+
     <!-- Read More / Show Less on project details
     ================================================== -->
-    <script type="text/javascript">
+    <script src="js/navbar.js"></script>
 
-    // custom sctript here....
-    
+    <script type="text/javascript">
+        setup_navbar("skills", "en");
     </script>
+
   </body>
 </html>

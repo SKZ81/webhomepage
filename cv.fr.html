@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,24 +40,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Johann CAHIER</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">C.V.</a></li>
-            <li><a href="about_me.fr.html">About Me</a></li>
-            <li><a href="around_the_web.fr.html">Around the Web</a></li>
-            <!-- li><a href="contact.en.html">Contact</a></li -->
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="cv.en.html"><span class="lang-sm lang-lbl" lang="en"></span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    <div id=navbar></div> <!-- placeholder -->
 
     <div class="container" class="myresume">
 
@@ -210,6 +193,76 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/navbar.js"></script>
+
+    <script type="text/javascript">
+        setup_navbar("cv", "fr");
+        //Read More / Show Less on project details
+        //==================================================
+        // etherstep2
+        $('#etherstep2_details').on('hidden.bs.collapse', function () {
+            $('#readmore_etherstep2').html("Read More &blacktriangledown;");
+        })
+        $('#etherstep2_details').on('shown.bs.collapse', function () {
+            $('#readmore_etherstep2').html('Show Less &Cross;')
+        })
+        $('#readmore_etherstep2').html("Read More &blacktriangledown;");
+
+        //multiplayer
+        $('#multiplayer_details').on('hidden.bs.collapse', function () {
+            $('#readmore_multiplayer').html("Read More &blacktriangledown;");
+        })
+        $('#multiplayer_details').on('shown.bs.collapse', function () {
+            $('#readmore_multiplayer').html('Show Less &Cross;')
+        })
+        $('#readmore_multiplayer').html("Read More &blacktriangledown;");
+
+        //SDCContext
+        $('#SDCContext_details').on('hidden.bs.collapse', function () {
+            $('#readmore_SDCContext').html("Read More &blacktriangledown;");
+        })
+        $('#SDCContext_details').on('shown.bs.collapse', function () {
+            $('#readmore_SDCContext').html('Show Less &Cross;')
+        })
+        $('#readmore_SDCContext').html("Read More &blacktriangledown;");
+
+        //FTTT
+        $('#FTTT_details').on('hidden.bs.collapse', function () {
+            $('#readmore_FTTT').html("Read More &blacktriangledown;");
+        })
+        $('#FTTT_details').on('shown.bs.collapse', function () {
+            $('#readmore_FTTT').html('Show Less &Cross;')
+        })
+        $('#readmore_FTTT').html("Read More &blacktriangledown;");
+
+        //CMM
+        $('#CMM_details').on('hidden.bs.collapse', function () {
+            $('#readmore_CMM').html("Read More &blacktriangledown;");
+        })
+        $('#CMM_details').on('shown.bs.collapse', function () {
+            $('#readmore_CMM').html('Show Less &Cross;')
+        })
+        $('#readmore_CMM').html("Read More &blacktriangledown;");
+
+        //CSTA
+        $('#CSTA_details').on('hidden.bs.collapse', function () {
+            $('#readmore_CSTA').html("Read More &blacktriangledown;");
+        })
+        $('#CSTA_details').on('shown.bs.collapse', function () {
+            $('#readmore_CSTA').html('Show Less &Cross;')
+        })
+        $('#readmore_CSTA').html("Read More &blacktriangledown;");
+
+        //SDCP
+        $('#SDCP_details').on('hidden.bs.collapse', function () {
+            $('#readmore_SDCP').html("Read More &blacktriangledown;");
+        })
+        $('#SDCP_details').on('shown.bs.collapse', function () {
+            $('#readmore_SDCP').html('Show Less &Cross;')
+        })
+        $('#readmore_SDCP').html("Read More &blacktriangledown;");
+    </script>
   </body>
 </html>
 œ

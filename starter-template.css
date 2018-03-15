@@ -42,3 +42,25 @@ span.stars, span.stars span {
 span.stars span {
     background-position: 0 0;
 }
+
+.dropdown-menu-custom {
+    background-color: #222;
+    color: #9d9d9d;
+    font-weight: bold;
+}
+
+span.dropdown-menu-custom-item {
+    color: #9d9d9d;
+    font-weight: bold;
+}
+
+..dropdown-menu-custom>li>a:focus, ..dropdown-menu-custom>li>a:hover {
+    background-color: #222;
+}
+
+
+
+a.dropdown-menu-custom:hover .dropdown-menu-custom-item {
+    color: white;
+    background-color: #222;
+}
