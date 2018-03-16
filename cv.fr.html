@@ -9,7 +9,7 @@
     <meta name="author" content="Johann Cahier">
     <link rel="icon" href="images/favicon.png">
 
-    <title>Johann CAHIER - Ingénieur Développement Système &amp; Embarqué</title>
+    <title>Johann CAHIER : Ingénieur Développement (Linux Embarqué)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,19 +40,20 @@
 
   <body>
 
-    <div id=navbar></div> <!-- placeholder -->
+   <div id=navbar></div> <!-- placeholder -->
 
-    <div class="container" class="myresume">
+    <div class="container">
 
+        <!-- ==================================================  WYPLAY  ========================================================= -->
         <div>
             <div class="col-md-2 container starter-template">
-                Jul. 2013 until now
+                Jul. 2013 - Juin 2017
                 <img class="img-responsive" src="images/wyplay-logo-2011_400x400.png">
             </div>
             <div class="col-md-10 container">
-                <h2> Ingénieur développement logiciel at Wyplay (Marseille, France)</h2>
+                <h2> Ingénieur développement logiciel at Wyplay (Marseille, France) </h2>
                 <h3> A propos de Wyplay </h3>
-                <p> Une citation du site de <a href="http://www.wyplay.com/?page=at-a-glance">wyplay</a> :
+                <p> Citation du site de <a href="http://www.wyplay.com/">wyplay</a> :
                     <div class="quote">
                         <blockquote>
                             Wyplay was founded in 2006 with the vision that the new emerging media over Internet and home connected devices would completely disrupt the TV ecosystem <i>status quo</i> and that most operators didn't have the right tools to address these new convergence trends and new challengers in a timely manner.
@@ -63,126 +64,255 @@
                 </p>
                 <h3> Réalisations : </h3>
                 <ul>
-                    <li> Le projet <b><i>Ether Step 2</i></b> au cours du quel j'ai eu différents rôles (parfois simultanément), dont : Main Developper, Team Leader, Intégrateur... Le but étant de livrer un MiddleWare pour la Set Top Box DCI804RMU (plus de détail ci dessous),</li>
-                    <li> Des contributions à <a href="https://frogbywyplay.com/">Frog</a> (<b><i>NB</i></b> : le terme "Frog" désigne une <i>offre commerciale</i> de Wyplay, mais en langage interne, entre développeur, "Frog" désigne aussi et surtout la base de code générique publique à la base de cette offre),
-                    <li> Durcissement Sécurité Système : système de vérification automatique des permissions des fichiers du système, en fonction d'un ensemble spécifique d'exigences fournies par <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.htmle">Cisco</a>, pour le produit <a href="http://www.sky.it/">Sky Italia</a></li>
-                </ul>
-                <h3> "Ether" Step 2 : Un middleware pour la DCI804RMU, une Set-Top-Box de Technicolor pour R-Mundo</h3>
-                <ul>
-                    <li><a href="http://www.mundo-r.com/gl">R Mundo</a> est un opérateur espagnol de télévison numérique en Galice,</li>
-                    <li><a href="http://www.technicolor.com/">Technicolor</a> a été le maitre d'œuvre et intégrateur du projet. Le matériel a été conçu autours d'un
-                    <li><b>7141</b> de <a href="http://www.st.com">ST-micro</a> qui est pratiquement le même "système sur puce" que le <a href="http://www.st.com/content/st_com/en/products/digital-set-top-box-ics/legacy-products/legacy-processors/sti7105.html">sti 7105
-                    </a>, utilisé par Canal+ dans certaines de leurs STB (TNT&amp;SAT)... Plus une interface "TCP/IP sur câble" (DOCSIS),</li>
-                    <li><a href=";lmlm;,:;,;,,">Nagra</a> a été le fournisseur du système de contôle d'accès (CAS, pour la télévision payante et son chiffrement)</li>
-                    <li><a href="http:/www.cinfo.es/">CInfo</a> qui ont conçu et développé l'Application / Interface Utilisateur,</li>
-                    <li>And <a href="http://www.wyplay.com/fr/">Wyplay</a> a fourni le middleware pour cette STB.</li>
-                </ul>
-
-                <p>Les similarités entre les "systèmes sur puce" 7105 et 7141 ont permis une certaines réutilisation de certains développements spécifiques et de corrections de bug spécifiques à l'architecture SH4 réalisés pour Canal+, via une réintégration des développements spécifique dans notre projet.</p>
-
-                <p>
-                    <h4> Réalisations </h4>
-                    <p>
-                        <ul>
-                            <li> Développement de nouvelles fonctionnalités :
-                            <ul>
-                                <b> DVB : </b>
-                                <li> Mise à jour du plan de service en fonction des informations diffusées : implémentation d'un scan DVB cyclique et permanant, incluant des contraintes clients <u>très</u> spécifiques (un opérateur câble ayant la maîtrise totale de son propre réseau)</li>
-                                <li> scan et mis à jour du plan de service : intégration d'un banc de test dans <a href="https://jenkins.io/">Jenkins</a>. <b>Note</b> : il s'agit d'un banc complexe, en dehors des compétances et de la responsabilité de l'équipe de Validation. En effet, il a été nécessaire de :
+                    <li> <u>R-Mundo</u> : projet de l'opérateur câblé espagnol éponyme, dont il est client et initiateur, est celui qui a occupé la majeure partie du temps que j'ai passé à <b>Wyplay</b>, et sur lequel j'ai été alternativement (sinon simultanément) : Développeur Principal, Team Leader et Integrateur...<br/>
+                    Le but de ce projet étant de fournir à <b>R-Mundo</b> un <b>middleware</b>, c'est à dire, une distribution Linux très spécifique, sans l'application principale ou "<b>U.I.</b>" (Interface Utilisateur), pour une Set-Top-Box produite par <b>Technicolor</b> ; mais aussi d'assister l'équipe du client en charge de développer la <b>U.I.</b>.
+                        <br/>
+                        <a id="readmore_etherstep2" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#etherstep2_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                        <div class="collapse project-details-container" id="etherstep2_details">
+                            <div class="project-details">
+                                <h3 class="project-details-title"> Ether Step 2 : Un <b>middleware</b> pour la DCI804RMU, une Set-Top-Box de Technicolor pour R-Mundo</h3>
+                                <h4> Contexte </h4>
                                 <ul>
-                                    <li> Mettre en place un injecteur de flux DVB/MPEG à partir de pièces matérielles... Dont une carte PCI Dektec</li>
-                                    <li> Piloter l'injecteur à distance via le réseau </li>
-                                    <li> Tout en simulant des appels de l'application au middleware (pour effacer le plan de service / lancer le scan / lire les résultats). </li>
-                                    <li> et alors seulement, pouvoir les comparer à ceux attendus via l'intégration dans Jenkins (mais ce n'était pas vraiment le <i>point chaud</i>) </li>
+                                    <li><a href="http://www.mundo-r.com/gl">R Mundo</a> est un opérateur câblé de télévision numérique (et fournisseur d'accès internet) en Galice,</li>
+                                    <li><a href="http://www.technicolor.com/">Technicolor</a> a été le maitre d'œuvre et intégrateur du projet. Le matériel a été conçu autours d'un
+                                    <li><a href="http://www.st.com">ST-micro</a> <b>7141</b>, qui est pratiquement le même "système sur puce" que le  <a href="http://www.st.com/content/st_com/en/products/digital-set-top-box-ics/legacy-products/legacy-processors/sti7105.html">sti 7105</a>utilisé par Canal+ dans certaines de leurs STB (TNT&amp;SAT)... Plus une interface "TCP/IP sur câble" (DOCSIS),</li>
+                                    <li><a href="https://dtv.nagra.com/secure/casdrm">Nagra</a> w a été le fournisseur du système de contôle d'accès (<b>CAS</b>, pour la télévision payante et son chiffrement)</li>
+                                    <li><a href="http:/www.cinfo.es/">CInfo</a> qui ont conçu et développé l'Application / Interface Utilisateur,</li>
+                                    <li>Et <a href="http://www.wyplay.com/">Wyplay</a> a fourni le middleware pour cette STB.</li>
                                 </ul>
-                                <li> Optimisation du temps d'accès aux EPG (intégrée dans <a href="https://frogbywyplay.com/">Frog</a>, produit générique) </li>
-                                <li> Notifications des mises à jour de BAT à application </li>
-                                <b> Sécurité : </b>
-                                <li> Validation intégration du CAS ("Control Access System") qui a impliqué de nouveaux dévelopments et quelques correctifs </li>
-                                <li> Durcissement Système pour être conforme aux exigences de la certification NASC de Nagra complience </li>
-                            </ul>
-                            </li>
-                            <li> Intégration / Mise au Point :
-                            <ul>
-                                <li> Intégration HDCP and macrovision (protections anti-copie sur sorties vidéos)</li>
-                                <li> "Alignement Frog" : <i>i.e.</i> mise à jour des composants générique de la base "Frog" à  la dernière version disponible, quand c'était possible.</li>
-                            </ul>
-                            </li>
-                            <li> Stabilité
-                            <ul>
-                                <li> Recherche/debug de fuites mémoires, conditions d'exécution concurentes... Auquels étaient dus plusieurs crashes "aléatoires",</li>
-                                <li> Auto-évaluation de la stabilité par l'équipe (parfois très réduite) de développemnt sur son propre banc de tests.</li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </p>
-                    <h4> Responsabilités </h4>
-                    <p> Au delà de mon rôle de développeur/intégrateur, j'ai également :
-                    <ul>
-                        <li> Animé une équipe réduite (~3 pers.) pendant 6 mois (Mars 2014 - Septembre 2014), </li>
-                        <li> &#x00C9;té le référence technique, aussi bien interne qu'externe, pour ce projet, durant tout son développement, </li>
-                    </ul>
-                </p>
-                <p>
-                </p>
+                                <br/>
+                                <p>Les similarités entre les "systèmes sur puce" 7105 et 7141 ont permis une certaines réutilisation de certains développements spécifiques et de corrections de bug spécifiques à l'architecture SH4 réalisés pour Canal+, via une réintégration des développements spécifique dans notre projet.</p>
 
+                                <h4> Réalisations </h4>
+                                <p>
+                                    <ul>
+                                        <li> Développement de nouvelles fonctionnalités :
+                                        <br/>
+                                        <b> <b>DVB</b> : </b>
+                                        <ul>
+                                            <li> Mise à jour du plan de service (entre autre, liste des chaînes) en fonction des informations diffusées : implémentation d'un scan <b>DVB</b> cyclique et permanant, incluant des contraintes clients <u>très</u> spécifiques (un opérateur câble ayant la maîtrise totale de son propre réseau)</li>
+                                            <li> can et mis à jour du plan de service <b>DVB</b> : intégration d'un banc de test automatisé dans <b>Jenkins</b>. Il s'agit d'un banc complexe, en dehors des compétances et de la responsabilité de l'équipe de Validation. En effet, il a été nécessaire de :
+                                            <ul>
+                                                <li>  Mettre en place un injecteur de flux <b>DVB</b>/<b>MPEG</b> à partir de pièces matérielles... Dont une carte PCI <a href="https://www.dektec.com">Dektec</a></li>
+                                                <li> Piloter l'injecteur à distance via le réseau </li>
+                                                <li> Tout en simulant des appels de l'application au <b>middleware</b> ((pour effacer le plan de service / lancer le scan / lire les résultats). </li>
+                                                <li> et alors seulement, pouvoir les comparer à ceux attendus via l'intégration dans Jenkins (mais ce n'était pas vraiment le <i>point chaud</i>) </li>
+                                            </ul>
+                                            <li> Optimisation du temps d'accès lors des requêtes <b>EPG</b> (Guide des Programmes Electronique intégrée dans <a href="https://frogbywyplay.com/">Frog</a>, produit générique) </li>
+                                            <li> Notifications des mises à jour de BAT à application </li>
+                                        </ul>
+                                        <b> Sécurité : </b>
+                                        <ul>
+                                            <li> Intégration et Validation du CAS ("Control Access System") qui a impliqué de nouveaux dévelopments et quelques correctifs </li>
+                                            <li> "Durcissement" Système (hardening) pour être conforme aux exigences de la certification NASC de Nagra complience </li>
+                                        </ul>
+                                        </li>
+                                        <li> Intégration / Mise au Point :
+                                        <ul>
+                                            <li> Intégration de <b>HDCP</b> et <b>macrovision</b> (protections anti-copie sur sorties vidéos numérique et analogique, repesctivement)</li>
+                                            <li> "Alignement Frog" : <i>i.e.</i> mise à jour des composants générique de la base "Frog" à  la dernière version disponible, lorsque c'était possible. </li>
+                                        </ul>
+                                        </li>
+                                        <li> Stabilité :
+                                        <ul>
+                                            <li> echerche/debug de fuites mémoires, conditions d'exécution concurentes... Auquels étaient dus plusieurs crashes "aléatoires",</li>
+                                            <li> Auto-évaluation de la stabilité par l'équipe (parfois très réduite) de développemnt sur son propre banc de tests.</li>
+                                        </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                                <h4> Responsabilités : </h4>
+                                <p> Au delà de mon rôle de développeur/intégrateur, j'ai également : </p>
+                                <ul>
+                                    <li> Animé une équipe réduite (~3 pers.) pendant 6 mois (Mars 2014 - Septembre 2014), </li>
+                                    <li> &#x00C9;té le référence technique, aussi bien interne qu'externe, pour ce projet, durant tout son développement, </li>
+                                </ul>
+                                <br/>
+                                Rendez-vous sur <a href="rmundo_gallery.en.html">gallerie d'images gallery</a> du projet R-Mundo.
+                                <br/><br/>
+                            </div>
+                        </div>
+                    </li>
+                    <li> <u>Contributions à <a href="http://wyplay.com/frog-products.php">Frog</a></u> (<b><i>NB</i></b> : au sens strict, le terme "Frog" désigne une <i>offre commerciale</i> de Wyplay, bien qu'en interne, il réfère aussi à la base de code <i>générique</i>) : certains développements spécifiques réalisés dans le cadre d'un projet client ayant tout intérêt à être reportés dans cette dernière,</li>
+                    <li> <u>Durcissement Système (Hardening)</u> : Vérification automatique des permissions de l'ensemble des fichiers du système, en fonction d'un cahier des charges fourni par <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.html">Cisco</a>, pour un produit destiné à <a href="http://www.sky.it/">Sky Italie</a>. </li>
+                    <li>
+                        <u>Developpement de n'une nouvelle fonctionnalité générique</u> / refonte de l'architecture interne d'un composant, afin de permettre le jeu simultané de plusieurs médias.
+                        <br/>
+                        <a id="readmore_multiplayer" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#multiplayer_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                        <div class="collapse project-details-container" id="multiplayer_details">
+                            <div class="project-details">
+                                <h3 class="project-details-title"> Refactoring du composant <b>Mediarender</b> afin de contôler de multiples instances de <b>Player</b> </h3>
+                                <b>Mediarenderer</b> est le point d'entré dans le middleware, pour la lecture de médias (la <b>UI</b>, ou tout autre client, n'envoyent <b><u>PAS</u></b> directement de message aux composants <b>player</b> et <b>recorders</b>). Il constitue une "abstraction", et implémente une API inspiré par, et très proche du strandard <a href="https://en.wikipedia.org/wiki/Universal_Plug_and_Play">UPnP</a>, en ce qui concerne l'Audio/Vidéo). Les principaux but de ce découplage dans l'architecture sont :
+                                <ul>
+                                    <li> Proposer une API complète mais relativement simple d'utilisation aux clients (typiquement la <b>UI</b>), en cachant les détails profonds, et, </li>
+                                    <li> Permettre au composant <b>player</b> de se concertrer uniquement sur le rendu du média lui-même, quelqu'en soit la source, simplifiant par là-même la conception de ce composant critique, aidant ainsi à assurer sa qualité et sa fiabilité.</li>
+                                </ul>
+
+                                <h3> Contexte </h3>
+
+                                Historiquement, et afin de simplifier l'implémentation du <b>Mediarender</b>, il a été retenu l'hypothèse selon laquelle <b><u>UN UNIQUE média</u></b> (que ce soit une chaine TV, une vidéo sur clef USB ou autre) serait joué à un instant donné, ainsi, <b><u>UNE UNIQUE  instance de <b>player</b></u></b> était nécessaire. Néanmoins, avec la des processeurs de plus en plus puissants, contôler plusieurs instances de <b>player</b> est devenu réaliste, ce qui permet de réaliser de nouvelle fonctionnalité comme :
+                                <ul>
+                                    <li> <u>Mozaïque</u> (souhaitée par <b>Sky Italia</b>) : réalisée en affichant simultanément plusieurs chaînes à l'écran (auparavant, les opérateurs devaient générer la mosaïque côté <i>backend</i> et la diffuser sur une chaine dédiée),</li>
+                                    <li> <u>Zap Rapide</u> (souhaité par <b>Canal+</b>) : un ensemble de chaînes (typiquement : précédente et suivante ; mais cela reste à la discrétion du client/la <b>U.I.</b>) sont <b>pré-chargées</b>, c'est à dire que l'ensemble de la chaine de rendu est mise en place pour chacune de ces chaines, bien qu'elles ne soient pas effectivement affichées à l'écran. Dès lorsqu'on zappe (typiquement avec la touche "Progamme +/-" keys) sur une chaine pré-chargée, il suffit à <b>mediarenderer</b> de permettuer l'affichage, optimisant drastiquement la latence.</li>
+                                </ul>
+
+                                <h3> Charge de travail induite </h3>
+
+                                La gestion de plusieurs instances de <b>player</b> implique des modifications à plusieurs niveaux :
+                                <ul>
+                                    <li> API de communication entre les processus impliqués (IPC sur Dbus) </li>
+                                    <li> sur le <b>player</b> lui-même </li>
+                                    <li> sur le mécanisme des <b>recorders</b> (un <b>recorder</b> est toujours instancié dès lors qu'on joue un média "<i>live</i>", afin notamment de permettre le <i>timeshift</i>, et ce même si l'utilisateur ne souhaite PAS stocker un enregistrement de façon persistante,</li>
+                                    <li> enfin, sur <b>mediarender</b>, qui se chargera d'envoyer ces nouveaux messages <b>DBus</b> aux instances <b>players</b> and <b>recorders</b>, outre le fait de gérer leur cycle de vie. </li>
+                                </ul>
+
+                                <h3> Réalisation </h3>
+
+                                Si la logique de gestion des instances de <b>players</b> est assez immédiate ; la complexité de la tâche réside dans la gestion des <b>recorders</b>, notamment la manière de les associers (et dissocier) des instances de <players>. Ainsi, les tâches que j'ai réalisé ont été :
+                                <ul>
+                                    <li> <u>Analyser</u> le code complet de <b>mediarender</b> (dont je n'avais jusqu'à lors qu'une connaissance partielle) </li>
+                                    <li> <u>Proposer</u> une refonte d'architecture pour ce composant à l'équipe (ainsi qu'au mainteneur du <b>mediarenderer</b>), detaillée sous forme de diagramme UML (diagrammes de classes et séquences), </li>
+                                    <li> <u>Implémenter</u> cette architecture, et enfin </li>
+                                    <li> <u>Tester</u> le code produit (manuaellement, ainsi qu'en corrigeant/augmentant la base de tests unitaires)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
+
+        <!-- ====================================================  ALTEN  ======================================================== -->
         <div>
             <div class="col-md-2 container starter-template">
-                Apr. 2006 - Oct 2009
+                Avr. 2006 - Sep. 2010
                 <img class="img-responsive" src="images/Logo_ALTEN.jpg">
             </div>
             <div class="col-md-10 container">
                 <h2> Ingénieur d'&#x00C9;tudes à Alten (Rennes, France)</h2>
                 <h3> le "Software Developmet Center" de Alten Rennes</h3>
                 <p>
-                Le <b>S.D.C.</b> était une division de Alten Rennes, dont le but était de fournir un service compétitif, en comparaison des filiales indiennes d'Alcatel. Celà peut parraître impossible, si on ne regarde que le cout de l'homme jour, mais les arguments étaient :
+                    Le <b>S.D.C.</b> était une division <b>Alten Rennes</b>, dont l'objectif était de fournir un service compétitif d'Assistance Technique, en comparaison des filiales indiennes d'<b>Alcatel</b>. Les arguments étant les suivants :
                     <ul>
                         <li>Une meilleure communication grâce à une langue et une culture commune,</li>
                         <li>La proximité géographique (Rennes / Nantes),</li>
-                        <li>Des ingénieurs compétents, mais pas trop cher, en recrutant principalement des jeunes,</li>
+                        <li>Des ingénieurs compétents, à un coût maîtrisé, en recrutant principalement des jeunes diplômés,</li>
                         <li>Une réduction des délais et du coût total des projets grâce à cette efficacité améliorée.</li>
                     </ul>
                 </p>
-                </p>
-                <h3> Contexte </h3>
+                <h3> Context </h3>
                 <p>
-                l'OSP (Open Service Platform) d'Alcatel est une technologie de serveur multi-lame, tournant sous Solaris. Son rôle est de gérer/piloter le réseau téléphonique classique, afin de réaliser ce qu'on appelle le "Réseau Intelligent", qui permet à son tour de fournir des services à forte valeur ajouté... Bien au delà du simple établissement d'un appel vocal ! (qui est la fonction première du <a href="https://en.wikipedia.org/wiki/Public_switched_telephone_network">Réseau Téléphone Commuté</a> et n'implique alors pas le R.I.).</p>
-                <p>Par exemple, le FRC (pour Flexible Routing and Charging) est un service qui permet à la victime d'une panne sur l'autoroute d'appeller un numéro spécial (unique, nationnal pour une marque / un réseau donné) depuis son mobile, et obtenir le centre technique plus proche, qui soit ouvert, et qui dispose effectivement de place pour recevoir ce client.
+                    l'<b>Open Service Platform</b> (<a href="https://support.alcatel-lucent.com/portal/web/support/product-result?entryId=1-0000000002439">OSP</a>) d'<b>Alcatel</b>  (aujourd'hui, <b>Nokia</b>) est une technologie de serveur multi-lame tournant sous <b>Solaris</b>. Son rôle est de gérer/piloter le réseau téléphonique classique, afin de réaliser ce qu'on appelle le "Réseau Intelligent" (Intelligent Network, <b>I.N.</b>), qui permet à son tour de fournir des services à forte valeur ajouté.... Bien au delà du simple établissement d'un appel vocal ! (qui est la fonction première du <a href="https://en.wikipedia.org/wiki/Public_switched_telephone_network">Réseau Téléphone Commuté</a> et n'implique alors pas l'<b>I.N.</b>).</p>
+                </p>
 
-                Un véhicule de secours est déjà en route !
-                </p>
-                <p>
-                    <a href="http://alcatel-lucent.com/wps/portal/!ut/p/kcxml/04_Sj9SPykssy0xPLMnMz0vM0Y_QjzKLd4w3MfQFSYGYRq6m-pEoYgbxjgiRIH1vfV-P_NxU_QD9gtzQiHJHR0UAAD_zXg!!/delta/base64xml/L0lJayEvUUd3QndJQSEvNElVRkNBISEvNl9BXzNBRC9lbl93dw!!?LMSG_CABINET=Solution_Product_Catalog&LMSG_CONTENT_FILE=Products/Product_Detail_000439.xml">ECN</a> est un autre service Réseau Intelligent, le cœur de cible étant les entreprises qui ont de multiples implantations géographiques, mais veulent les avantages d'une PABX interne, comme les numéros courts pour contacter des collaborateurs, au travers des multiples sites de l'entreprise.
-                    Désormais ce service permets égalemnent une convergence fixe/mobile (les collaborateurs peuvent composer des numéros courts de manière transparente depuis leur mobile : le service peut être en effet activer dès l'instant ou un terminal donné est décroché ! Il permet également aux utilisateur de gérer leur mobilté, en routant les appels entrant (<i>e.g.</i> au bureau, sur le mobile, à la maison ou sur boite vocale) depuis une interface web publique (authentifiée, évidemment).
-                </p>
-                <h3> Réalisatons </h3>
+                <a id="readmore_SDCContext" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#SDCContext_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                <div class="collapse project-details-container" id="SDCContext_details">
+                    <div class="project-details">
+                        <h4 class="project-details-title"> Exemples de services <b>I.N.</b> </h4>
+                        <p><a href="https://support.alcatel-lucent.com/portal/web/support/product-result?entryId=1-0000000002338">Enterprise Communication at Network</a> (<b>ECN</b>) est l'un des produits principaux d'<b>Alcatel</b> dans la gamme <b>Intelligent Network</b>. Il est dédié en priorité aux entreprise disposant de plusieurs sites géographiquement éloignés, mais qui souhaite tout de même bénéficier des avantages d'une PABX sur site, comme les numéros courts pour joindre un poste interne, de manière transparante quelle soit l'emplacement du-dit poste.</p>
+                        <p>Avec le temps, le produit a gagné en complexité et en fonctionnalités, et permets désormais (entre autres) la converge fixe/mobile (les collaborateurs peuvent par exemple appeler un numéro court depuis leur mobile, à l'exterieur, aussi facilement que de leur poste fixe au bureau).</p>
+                        <p>Les utilisateurs du service peuvent également gérer facilement leur mobilité, en configurant le routage des appels reçus, (<i>e.g.</i> vers le bureau, le mobile, le domicile ou un répondeur), ce depuis une interface web (évidemment authentifiée) accessible sur internet.</p>
+                        <p>Un autre des principaux produit <b>I.N.</b>, le <a href="https://support.alcatel-lucent.com/portal/web/support/product-result?entryId=1-0000000002866">FRC</a> (pour "Flexible Routing and Charging") permettra, par exemple, à un utilisateur de la route victime d'une panne, d'appeler un numéro spécial national unique (pour une marque donnée) depuis son mobile, et d'être dirigé vers le Centre Technique le plus proche, ouvert, et ayant la capacité de l'accueillir.
+                        <br/>
+                        La dépanneuse est déjà en route !</p>
+                    </div>
+                </div>
+                <h3> Projets </h3>
                 <p>
                     <ul>
                         <li>
-                            <b>France Télécom Ticket Téléphone : </b> le but dee ce projet a été de développer un service intelligent gérant des cartes d'appel prépayées, utilisable depuis n'importe quel téléphone, public ou même privé.
-                            En appellant un numéro gratuit, le client peut alors charger le coût de l'appel au crédit de sa carte prépayée, et peut acheter des recharges de crédit dans divers magasins. Ce service a été conçu pour être déployé en Afrique du Nord, et principalement au Maroc, par France Télécom.
-
-                            Ce projet a été une belle occasion pour une montée en compétence du SDC aux premiers temps. Il permis aux développeurs juniors de se "faire la main" sur les technologies d'Alcatel, et pour les Senior une occasion de mettre en place l'organisation du SDC, au cours d'un développement finement guidé par Alcatel. Cela a été, également, la première occasion pour le SDC de livrer un produit logiciel aux équipes internes de validation d'Alcatel.
+                            <b>France Télécom Ticket Téléphone</b> : un service simple de téléphonie fixe prépayée.
+                            <br/>
+                            <a id="readmore_FTTT" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#FTTT_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                            <div class="collapse project-details-container" id="FTTT_details">
+                                <div class="project-details">
+                                    <p>Le but était de développer un service <b>I.N.</b> gérant des "cartes" téléphoniques prépayée. Ce service devait être utilisable depuis n'importe quel téléphone fixe, publique ou même privé, en se connectant au service via un numéro spécial gratuit.<br/>
+                                    L'utilisateur du service devait pouvoir, une fois authentifié sur le serveur vocal, passer son appel, facturé alors sur son propre compte, plutôt que sur la ligne physiquement utilisée<br/>
+                                    <p>Il devait égalament pouvoir recharger son compte, et ce que en achetant des "tickets-recharge" (<i>vouchers</i>), disponibles dans une grande variété de commerces. Le service était prévu pour être déployé en Afrique du Nord, en particulier au Maroc, par <b>France Télécom</b>.</p>
+                                    <p>Une contrainte technique de ce projet était de s'interfacer avec une le serveur (<i>back-end</i>), déjà déployé, gérant effectivement les comptes et les tickets-recharge.</p>
+                                    <p>Ce projet à été l'occasion d'une première montée en compétances du <b>S.D.C.</b> à ces tout débuts... Il permit aux développeurs junior de se familiariser avec les outils de développement spécifique d'<b>Alcatel</b>, pendant que les seniors et les managers finalisaient l'organisation du service.<br/>
+                                    Enfin, ce fut pour le <b>S.D.C.</b> la première occasion de fournir un livrable aux équipe de validationd'<b>Alcatel</b></p>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <b>Community Mobilty Manager : </b> il s'agit de prédécesseur de l'<b>ECN</b>. Le but du projet était de porter des groupes de modules écrits en C++ de SPARC32 à SPARC64 pour permettre la migration de services sur des serveurs nouvelle génération.
-                            Certains de ces modules était facilement portable et n'ont pas posés de difficultés, quelques autres ont posés des problèmes épineux.
+                            <b>Community Mobilty Manager</b> : Portage d'un ensemble de services sur du nouveau matériel.
+                            <br/>
+                            <a id="readmore_CMM" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#CMM_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                            <div class="collapse project-details-container" id="CMM_details">
+                                <div class="project-details">
+                                    <p>L'objectif était d'effectuer le portage d'un certain nombre de modules (ou "services") du produit <b>CMM</b> de <b>SPARC32</b> vers <b>SPARC64</b> afin de permettre la migration de ce produit sur une toute nouvelle version de serveurs <b>OSP</b></p>
+                                    <p>Pour Certains modules la migration se faisait bien en suivant la procédure fournie ; mais quelques bugs subtils, introduits par le passage de 32 à 64 bits, ont constitué autant défis stimulants.</p>
+                                    <p>Note : <b><i>CMM</i></b> est le nom précendant du produit <a href="">ECN</a>.
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <b>CSTA Session Manager :</b> il s'agit d'un composant qui permet à un utilisateur de gérer une ligne SIP depuis (par exemple) une interface web.is a component that allow user to manage a SIP line from (for instance) a web application. It is also the first project on which I took a real lead, by designing the software architecture in UML. CSTA SM is intrinsically asynchronous, where the development toolchain of alcatel only allowed to produce synchronous services. This lead to a 100% C++ code design, taking advantage of lower-level APIs.
+                            <b>CSTA Session Manager</b> : un module de l'ECN conçu et codé à 100% au <b>S.D.C.</b>
+                            <br/>
+                            <a id="readmore_CSTA" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#CSTA_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                            <div class="collapse project-details-container" id="CSTA_details">
+                                <div class="project-details">
+                                    <p>Le <b>CSTA Session Manager</b> est un module de l'<a href="https://support.alcatel-lucent.com/portal/web/support/product-result?entryId=1-0000000002338">ECN</a>, qui permet à un utilisateur de piloter une ligne <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol">SIP</a> (décrocher, transférer un appel, etc), par exemple depuis une interface web, grâce au protocole <a href="https://fr.wikipedia.org/wiki/Computer-supported_telecommunications_applications">CSTA</a>, basée sur <b>SOAP/XML</b>, et justement prévu pour piloter
+                                    une ligne, donc en particulier une ligne <b>SIP</b>.</p>
+                                    <p>Ce composant a été intégrallement conçu et codé au <b>S.D.C.</b>. <p>C'est également le premier projet sur lequel j'ai pris un lead technique, notamment en concevant l'architecture logicielle interne (en <b>UML</b>) de ce module, devenant <i>de facto</i> le référent technique pour l'équipe.</p>
+                                    <p>Le plus gros challenge de ce projet aura été de concevoir et réaliser un service intrinsèquement <u><b>a</b></u>synchrone ; alors que la chaine de développement d'<b>Alcatel</b> était prévue pour produire des services synchrones uniquement : ce qui nous a amené à mettre cet outil de côté, et de favoriser une implémentation 100% en C++, viaz des appels direct aux APIs de bas-niveau.</p>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <b>SDC-Payment :</b> was another pole of the Alcatel/Alten partnership, mainly aimed to prepaid mobile solutions. I worked for <a href="http://www.orange.ci">Orange Côte d'Ivoire</a> customer. Those missions where way more operationnal and less R&ampD oriented. My main task was to plan night on production server, and then oversee them during nighttime.
+                            <b>SDC-Payment</b> : Plannification et supervision d'intervention de nuit
+                            <br/>
+                            <a id="readmore_SDCP" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#SDCP_details" aria-expanded="false" aria-controls="collapseExample">Lire plus &blacktriangledown;</a>
+                            <div class="collapse project-details-container" id="SDCP_details">
+                                <div class="project-details">
+                                    <p>D'un point de vue purement <i>business</i>, le <b>S.D.C-P</b> était une autre entitée au sein du partenariat <b>Alcatel</b>/<b>Alten</b>, orienté sur les solutions de mobile prépayé, basées sur le <a href="#" data-toggle="modal" data-target=".pop-up-CRE">Rating Engine</a> d'<b>Alcatel</b>. En pratique, il impplique la même technologie (<b>OSP</b>), et les mêmes collègues, le tout étant situé dans les mêmes locaux...<br/>
+                                    Néanmoins, l'activité était plus orienté "opérationnel", et donc beaucoup moins R&amp;D.</p>
+                                    <p>Au <b>S.D.C-P</b> j'ai travaillé pour <a href="http://www.orange.ci">Orange Côte d'Ivoire</a>, un client d'<b>Alcatel</b>. <br/>
+                                    Mes principales tâches ont été d'implémenter des évolutions et correctifs mineurs, puis de plannifier des interventions de nuit afin de les déployer sur les serveurs de production, et finalement superviser ces interventions, en fournissant au besoin du support aux techniciens <b>Orange</b> localisés à Abidjan.</p>
+                                </div>
+                            </div>
+                            <div class="modal fade pop-up-CRE" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&Cross;</button>
+                                            <h4 class="modal-title" id="myModalLabel-1">Alcatel 8618<br/>Convergent Rating Engine (CRE)</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4><span class="label label-danger">Discontinued product</span> No external link available...</h4>
+                                            <hr>
+                                            <p><b>Description</b>:The Alcatel Convergent Rating Engine (CRE) network element performs rating and balance
+                                            management of prepaid (GSM, 3G, CDMA) and postpaid (real time cost control) products and
+                                            services.</p>
+                                            <p><b>Protocol</b>: SOAP / HTTP</p>
+                                            <h4>Features</h4>
+                                            <ul>
+                                                <li>Account</li>
+                                                <li>Customer</li>
+                                                <li>Adjustment</li>
+                                                <li>Top-up</li>
+                                                <li>Call History</li>
+                                                <li>Customer Account</li>
+                                                <li>Commercial Offer</li>
+                                                <li>Customer Subscription</li>
+                                                <li>Friends and Family</li>
+                                                <li>Spend Limit</li>
+                                                <li>CusSub</li>
+                                                <li>Bucket</li>
+                                                <li>Counter</li>
+                                            <ul>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div>
                         </li>
                     </ul>
                 </p>
             </div>
         </div>
     </div>
-
 
 
     <!-- Bootstrap core JavaScript
@@ -198,71 +328,71 @@
 
     <script type="text/javascript">
         setup_navbar("cv", "fr");
-        //Read More / Show Less on project details
+
+        //Lire plus / Show Less on project details
         //==================================================
         // etherstep2
         $('#etherstep2_details').on('hidden.bs.collapse', function () {
-            $('#readmore_etherstep2').html("Read More &blacktriangledown;");
+            $('#readmore_etherstep2').html("Lire plus &blacktriangledown;");
         })
         $('#etherstep2_details').on('shown.bs.collapse', function () {
             $('#readmore_etherstep2').html('Show Less &Cross;')
         })
-        $('#readmore_etherstep2').html("Read More &blacktriangledown;");
+        $('#readmore_etherstep2').html("Lire plus &blacktriangledown;");
 
         //multiplayer
         $('#multiplayer_details').on('hidden.bs.collapse', function () {
-            $('#readmore_multiplayer').html("Read More &blacktriangledown;");
+            $('#readmore_multiplayer').html("Lire plus &blacktriangledown;");
         })
         $('#multiplayer_details').on('shown.bs.collapse', function () {
             $('#readmore_multiplayer').html('Show Less &Cross;')
         })
-        $('#readmore_multiplayer').html("Read More &blacktriangledown;");
+        $('#readmore_multiplayer').html("Lire plus &blacktriangledown;");
 
         //SDCContext
         $('#SDCContext_details').on('hidden.bs.collapse', function () {
-            $('#readmore_SDCContext').html("Read More &blacktriangledown;");
+            $('#readmore_SDCContext').html("Lire plus &blacktriangledown;");
         })
         $('#SDCContext_details').on('shown.bs.collapse', function () {
             $('#readmore_SDCContext').html('Show Less &Cross;')
         })
-        $('#readmore_SDCContext').html("Read More &blacktriangledown;");
+        $('#readmore_SDCContext').html("Lire plus &blacktriangledown;");
 
         //FTTT
         $('#FTTT_details').on('hidden.bs.collapse', function () {
-            $('#readmore_FTTT').html("Read More &blacktriangledown;");
+            $('#readmore_FTTT').html("Lire plus &blacktriangledown;");
         })
         $('#FTTT_details').on('shown.bs.collapse', function () {
             $('#readmore_FTTT').html('Show Less &Cross;')
         })
-        $('#readmore_FTTT').html("Read More &blacktriangledown;");
+        $('#readmore_FTTT').html("Lire plus &blacktriangledown;");
 
         //CMM
         $('#CMM_details').on('hidden.bs.collapse', function () {
-            $('#readmore_CMM').html("Read More &blacktriangledown;");
+            $('#readmore_CMM').html("Lire plus &blacktriangledown;");
         })
         $('#CMM_details').on('shown.bs.collapse', function () {
             $('#readmore_CMM').html('Show Less &Cross;')
         })
-        $('#readmore_CMM').html("Read More &blacktriangledown;");
+        $('#readmore_CMM').html("Lire plus &blacktriangledown;");
 
         //CSTA
         $('#CSTA_details').on('hidden.bs.collapse', function () {
-            $('#readmore_CSTA').html("Read More &blacktriangledown;");
+            $('#readmore_CSTA').html("Lire plus &blacktriangledown;");
         })
         $('#CSTA_details').on('shown.bs.collapse', function () {
             $('#readmore_CSTA').html('Show Less &Cross;')
         })
-        $('#readmore_CSTA').html("Read More &blacktriangledown;");
+        $('#readmore_CSTA').html("Lire plus &blacktriangledown;");
 
         //SDCP
         $('#SDCP_details').on('hidden.bs.collapse', function () {
-            $('#readmore_SDCP').html("Read More &blacktriangledown;");
+            $('#readmore_SDCP').html("Lire plus &blacktriangledown;");
         })
         $('#SDCP_details').on('shown.bs.collapse', function () {
             $('#readmore_SDCP').html('Show Less &Cross;')
         })
-        $('#readmore_SDCP').html("Read More &blacktriangledown;");
+        $('#readmore_SDCP').html("Lire plus &blacktriangledown;");
     </script>
   </body>
 </html>
-œ
