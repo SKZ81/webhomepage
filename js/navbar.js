@@ -1,7 +1,10 @@
 var menu_items = ['cv', 'skills', 'about_me', 'around_the_web'];
 var languages=['en', 'fr']
 
-function setup_navbar(currentPage, language) {
+
+
+
+function setup_navbar(currentPage, language /* TODO : rather read html node 'lang' attribute */) {
     $("#navbar").load("navbar.html", function() {
         // code to be executed as a CALLBACK, once loaded
         $("#lang_flag_indicator").attr("lang", language);
