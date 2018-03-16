@@ -18,7 +18,7 @@ body {
   padding-left: 20px;
 }
 
-h3.project-details-title {
+.project-details-title {
   margin-top: 0px;
 }
 
@@ -54,7 +54,7 @@ span.dropdown-menu-custom-item {
     font-weight: bold;
 }
 
-..dropdown-menu-custom>li>a:focus, ..dropdown-menu-custom>li>a:hover {
+.dropdown-menu-custom>li>a:focus, .dropdown-menu-custom>li>a:hover {
     background-color: #222;
 }
 
@@ -64,3 +64,4 @@ a.dropdown-menu-custom:hover .dropdown-menu-custom-item {
     color: white;
     background-color: #222;
 }
+
