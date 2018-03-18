@@ -24,10 +24,10 @@ function setup_navbar(currentPage, language /* TODO : rather read html node 'lan
 
         languages.forEach(function(lang) {
             if (language != lang) {
-                console.log("link to " + lang + ' is now ' + currentPage + '.' + lang + '.html');
+//                 console.log("link to " + lang + ' is now ' + currentPage + '.' + lang + '.html');
                 $('#linkto_'+lang).attr("href", currentPage + '.' + lang + '.html');
             } else {
-                console.log("link to " + lang + ' is still #');
+//                 console.log("link to " + lang + ' is still #');
             }
         });
 
