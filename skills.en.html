@@ -45,76 +45,43 @@
 
     <div class="container">
 
-            <div class="col-md-6">
+            <div class="col-md-6" id="languages">
                 <h2>Languages</h2>
-                <div class="col-md-8">
-                    <h4>C</h4>
-                </div>
-                <div class="col-md-4">
-                        <input value="4.5" class="rating rating-loading" data-size="xs">
-                </div>
-            <!--</div>-->
-            <!--<div class="row">-->
-                <div class="col-md-8">
-                    <h4>C++98</h4>
-                </div>
-                <div class="col-md-4">
-                    <input value="5" class="rating rating-loading" data-size="xs">
-                </div>
-            <!--</div>-->
-            <!--<div class="row">-->
-                <div class="col-md-8">
-                    Python
-                </div>
-                <div class="col-md-4">
-                        <input value="4" class="rating rating-loading" data-size="xs">
-                </div>
-            <!--</div>-->
-           <!-- <div class="row">-->
-                <div class="col-md-8">
-                    C++14
-                </div>
-                <div class="col-md-4">
-                    <input value="3" class="rating rating-loading" data-size="xs">
-                </div>
-            <!--</div>-->
-            <!--<div class="row">-->
-                <div class="col-md-8">
-                    Bash script
-                </div>
-                <div class="col-md-4">
-                        <input value="4" class="rating rating-loading" data-size="xs">
-                </div>
-            <!--</div>-->
-            <!--<div class="row">-->
-                <div class="col-md-8">
-                    HTML / CSS / JavaScript
-                </div>
-                <div class="col-md-4">
-                    <input value="3" class="rating rating-loading" data-size="xs" displayOnly="true" title="" data-step=0.5>
-                </div>
             </div>
 
 
 
-            <div class="col-md-6">
+            <div class="col-md-6" id="operating_systems">
                 <h2>Operating Sytems</h2>
-                <div class="col-md-8">
-                    Linux (userland)
-                </div>
-                <div class="col-md-4">
-                        <input value="4.5" class="rating rating-loading" data-size="xs">
-                </div>
-                <div class="col-md-8">
-                    Linux (kernel)
-                </div>
-                <div class="col-md-4">
-                        <input value="2.5" class="rating rating-loading" data-size="xs">
-                </div>
             </div>
 
 
     </div>
+
+    <!-- div class="container">
+        <h2> General </h2 -->
+
+        <!-- Languages / Op.Systems / tools (make...) / -->
+
+<!--        <hr><br/>
+        <h2> Embedded </h2>-->
+        <!-- Hardware / tools / -->
+
+
+<!--        <hr><br/>
+        <h2> Web Development <h2>-->
+
+
+<!--        <hr><br/>
+        <h2> Other <h2>-->
+        <!-- WebDev / Protocols / ML-NN /  -->
+<!--                <div class="col-md-8">
+                    HTML / CSS / JavaScript
+                </div>
+                <div class="col-md-4">
+                    <input value="3" class="rating rating-loading" data-size="xs" displayOnly="true" title="" data-step=0.5>
+                </div>-->
+<!--     </div> -->
 
 
     <!-- Bootstrap core JavaScript
@@ -131,9 +98,35 @@
     <script src="js/navbar.js"></script>
 
     <script src="js/star-rating.min.js"></script>
+    <script src="js/skills.js"></script>
 
     <script type="text/javascript">
+        var skills_data = [
+            {
+                category: 'languages',
+                skill_list: [
+                    {skill: 'C', score: 4.5},
+                    {skill: 'C++98', score: 5},
+                    {skill: 'Python', score: 4},
+                    {skill: 'C++14', score: 3},
+                    {skill: 'Bash scripting', score: 4},
+                ]
+            },
+            {
+                category: 'operating_systems',
+                skill_list: [
+                    {skill: 'Linux (userland)', score: 4.5},
+                    {skill: 'Linux (kernel)', score: 3},
+                    {skill: 'Other Un*x', score: 3.5},
+                    {skill: 'FreeRTOS', score: 2.5},
+                    {skill: 'Windows', score: 2},
+                ]
+            }
+        ];
+
+
         setup_navbar("skills", "en");
+        append_skills(skills_data);
         $('.rating-loading').rating({displayOnly: true, step: 0.5});
     </script>
 
