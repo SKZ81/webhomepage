@@ -35,7 +35,18 @@
       a {
         font-weight:bold;
       }
-    </style>
+      img.uniformize {
+        border-radius: 32px;
+        border: solid 2px black;
+      }
+      img.uniformize2 {
+        border-radius: 64px;
+        border: solid 4px black;
+      }
+      .mono {
+        font-family: monospace;
+      }
+      </style>
   </head>
 
   <body>
@@ -43,13 +54,72 @@
     <div id=navbar></div> <!-- placeholder -->
 
     <div class="container">
+        <br/><br/>
+        <div class="container">
+            <div class="col-md-2">
+                <a href="https://skz81.wordpress.com/">
+                    <img  src="images/wordpress.png" width=200 height=200>
+                </a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+                <h2> Wordpress </h2>
+                <p> This is my <b>technical blog</b> On this blog I speak about my technical hobbies, and in particular, AVR microcontrollers.</p>
+                <p>This is not exclusive: one can find various topics, as advanced C++, mounting the root filesystem of a raspeberry pi through NFS, and so on. </p>
+            </div>
+        </div>
+        <br/>
 
-      <div class="starter-template">
-        <h1>AROUND THE WEB</h1>
-        <a href="https://skz81.wordpress.com/"><img  src="images/wordpress_wikimedia_commons.png" width=200 height=200></a>
-        <a href="https://github.com/SKZ81/"><img  src="images/github-icon.png" width=200 height=200></a>
-      </div>
+        <div class="container">
+            <div class="col-md-2">
+                <a href="https://github.com/SKZ81/">
+                    <img  src="images/github.png" width=200 height=200>
+                </a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+                <h2> Github </h2>
+                <p> My various <b>github repositories</b>. Some are forks I made, either for reference or to work on.</p>
+                <p> Some articles of my blog are pointing to them (mainly <a class="mono" href="https://github.com/SKZ81/avr_misc_sketches">avr-misc-sketche</a>, see various branches).</p>
+            </div>
+        </div>
+        <br/>
 
+        <div class="container">
+            <div class="col-md-2">
+                <a href="https://stackoverflow.com/users/5692818/skz-81">
+                    <img  src="images/stackoverflow.png" width=200 height=200>
+                </a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+                <h2> Stackoverflow </h2>
+                From time to time I try to give solutions to question asked on <b>stackoverflow</b>.
+                I barely never ask, but when I do, they are pretty tricky, like this one (left unanswered, but upvoted)...
+            </div>
+        </div>
+        <br/>
+
+        <div class="container">
+            <div class="col-md-2">
+                <a href="https://freenode.net/">
+                    <img  src="images/irc.png" width=200 height=200>
+                </a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+                <h2> Freenode's IRC </h2>
+                I'm frequently connected as <b class="mono">skz81</b>, and reachable on the following channels:
+                <ul class="mono">
+                    <li>#avr</li>
+                    <li>#esp8266</li>
+                    <li>#esp32</li>
+                    <li>#yocto</li>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+        <br/>
     </div><!-- /.container -->
 
 
