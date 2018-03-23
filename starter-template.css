@@ -7,20 +7,29 @@ body {
 }
 
 
-.project-details {
+.project-details, .legend {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
   background-color: #E0E0E0;
 }
 
-.project-details-container {
+.project-details-container, .legend-container {
   padding-left: 20px;
 }
 
 .project-details-title {
   margin-top: 0px;
 }
+
+.legend-title {
+  margin-bottom: 0px;
+ }
+
+.skill_label {
+/*  margin-top: 0px;
+  margin-bottom: 0px;*/
+ }
 
 @media (min-width: 992px) {
     .modal-lg {
