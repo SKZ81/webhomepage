@@ -31,57 +31,122 @@
       a {
         font-weight:bold;
       }
-      #under_construction {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        margin-top:10%;
-      }
     </style>
+
+    <link href="css/star-rating.min.css" rel="stylesheet">
+
   </head>
 
   <body>
 
     <div id=navbar></div> <!-- placeholder -->
 
-    <div class="container">
-        <!-- h2>Languages</h2>
-        <div class="row">
-            <div class="col-sm">
-                C
+    <a id="rating_legend_button" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#rating_legend" aria-expanded="false" aria-controls="collapseExample">Légende des notes &blacktriangledown;</a>
+    <div class="collapse legend-container" id="rating_legend">
+        <div class="legend container">
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="rating rating-loading" data-size="xs" value="1">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="legend-title">Notions :</h4> Connais les bases théorique. Déjà utilisé pour des tâches basiques.
+                </div>
             </div>
-            <div class="col-sm">
-                <span class="stars">4</span>
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="rating rating-loading" data-size="xs" value="2">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="legend-title">Connaissances :</h4> Connais une bonne partie de la théorie pour un usage standard. Capable de réaliser des tâches simples à moyennement complexe.
+                </div>
             </div>
-            <div class="col-sm">
-                C++98
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="rating rating-loading" data-size="xs" value="3">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="legend-title">Bonnes connaissances :</h4> Connais bien la théorie pour un usage standard, et quelques aspects de théorie avancée. Capable de réaliser la plupart des tâches.
+                </div>
             </div>
-            <div class="col-sm">
-                <span class="stars">4.5</span>
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="rating rating-loading" data-size="xs" value="4">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="legend-title">Maîtrise :</h4> Bonne connaissance des aspects théoriques avancés. Capable de réaliser n'importe quelle tâche.
+                </div>
             </div>
-            <div class="col-sm">
-                C++14
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="rating rating-loading" data-size="xs" value="5">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="legend-title">Gourou :</h4> Serait Bjarne Stroustrup pour le C++ (ou un autre membre du "C++ comittee").
+                </div>
             </div>
-            <div class="col-sm">
-                <span class="stars">3</span>
-            </div>
-            <div class="col-sm">
-                <span class="stars">3.5</span>
-            </div>
-            <div class="col-sm">
-                <span class="stars">8</span>
-            </div>
-
         </div>
-
-        <h2>Operating Sytems</h2>
-        <div class="row">
-
-        </div -->
-        <img src="images/under_construction.jpg" id="under_construction"/>
     </div>
 
+    <div class="container">
+
+        <div class="col-md-6" id="operating_systems">
+            <h2>Systèmes d'exploitation</h2>
+        </div>
+
+        <div class="col-md-6" id="general_languages">
+            <h2>Languages (généraux)</h2>
+        </div>
+
+        <div class="col-md-6" id="methodology">
+            <h2>Méthodologies / Process</h2>
+        </div>
+
+        <div class="col-md-6" id="tools_frameworks">
+            <h2>Outils et Frameworks</h2>
+        </div>
+
+        <div class="col-md-6" id="embedded">
+            <h2>Embarqué</h2>
+        </div>
+
+        <div class="col-md-6" id="protocols">
+            <h2>Protocoles</h2>
+        </div>
+
+        <div class="col-md-6" id="other_languages">
+            <h2>Autres Langages</h2>
+        </div>
+
+        <div class="col-md-6" id="web_development">
+            <h2>Développement Web</h2>
+        </div>
+
+    </div>
+
+    <!-- div class="container">
+        <h2> General </h2 -->
+
+        <!-- Languages / Op.Systems / tools (make...) / -->
+
+<!--        <hr><br/>
+        <h2> Embedded </h2>-->
+        <!-- Hardware / tools / -->
+
+
+<!--        <hr><br/>
+        <h2> Web Development <h2>-->
+
+
+<!--        <hr><br/>
+        <h2> Other <h2>-->
+        <!-- WebDev / Protocols / ML-NN /  -->
+<!--                <div class="col-md-8">
+                    HTML / CSS / JavaScript
+                </div>
+                <div class="col-md-4">
+                    <input value="3" class="rating rating-loading" data-size="xs" displayOnly="true" title="" data-step=0.5>
+                </div>-->
+<!--     </div> -->
 
 
     <!-- Bootstrap core JavaScript
@@ -93,14 +158,117 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
-
+    <!-- Read More / Show Less on project details
+    ================================================== -->
     <script src="js/navbar.js"></script>
-    <script src="js/stars.js"></script>
+
+    <script src="js/star-rating.min.js"></script>
+    <script src="js/skills.js"></script>
 
     <script type="text/javascript">
+        $('#rating_legend').on('hidden.bs.collapse', function () {
+            $('#rating_legend_button').html("Légende des notes &blacktriangledown;");
+        })
+        $('#rating_legend').on('shown.bs.collapse', function () {
+            $('#rating_legend_button').html('Légende des notes &blacktriangle;')
+        })
+        $('#rating_legend_button').html("Légende des notes &blacktriangledown;");
+
+        var skills_data = [
+            {
+                category: 'general_languages',
+                skill_list: [
+                    {skill: 'C', score: 4},
+                    {skill: 'C++98', score: 4.5},
+                    {skill: 'C++14', score: 2},
+                    {skill: 'Python', score: 3.5},
+                    {skill: 'Bash scripting', score: 3},
+                ]
+            },
+            {
+                category: 'operating_systems',
+                skill_list: [
+                    {skill: 'GNU / Linux (userland)', score: 4},
+                    {skill: 'Linux (kernel)', score: 2},
+                    {skill: 'Autres Un*x', score: 3},
+                    {skill: 'FreeRTOS', score: 2},
+                ]
+            },
+            {
+                category: 'methodology',
+                skill_list: [
+                    {skill: 'UML 2 (diagrames de classe / de séquence)', score: 4},
+                    {skill: 'UML 2 (other)', score: 2.5},
+                    {skill: 'Agile/Sscum', score: 3.5},
+                    {skill: 'Cycle en V', score: 2.5},
+                ]
+            },
+            {
+                category: 'tools_frameworks',
+                skill_list: [
+                    {skill: 'Qt', score: 3.5},
+                    {skill: 'gcc', score: 4},
+                    {skill: 'gdb', score: 3.5},
+                    {skill: 'make', score: 3.5},
+                    {skill: 'autoconf / automake', score: 2},
+                    {skill: 'cmake', score: 1},
+                    {skill: 'valgrind', score: 3},
+                    {skill: 'Electric Fence', score: 3.5},
+                ]
+            },
+            {
+                category: 'other_languages',
+                skill_list: [
+                    {skill: 'Prolog', score: 3},
+                    {skill: 'Turbo Pascal', score: 3},
+                    {skill: 'GW-BASIC', score: 3.5},
+                    {skill: 'SQL', score: 3.5},
+                    {skill: 'Java', score: 2.5},
+                    {skill: 'LaTeX', score: 1.5},
+                ]
+            },
+            {
+                category: 'web_development',
+                skill_list: [
+                    {skill: 'PHP', score: 3},
+                    {skill: 'HTML / CSS', score: 3.5},
+                    {skill: 'JavaScript', score: 3.5},
+                    {skill: 'jQuery', score: 2},
+                    {skill: 'Bootstrap', score: 2.5},
+                ]
+            },
+            {
+                category: 'protocols',
+                skill_list: [
+                    {skill: 'TCP / IP', score: 3.5},
+                    {skill: 'HTTP', score: 3},
+                    {skill: 'SS7 / INAP', score: 2.5},
+                    {skill: 'SIP', score: 3},
+                    {skill: 'CSTA / SOAP', score: 3.5},
+                    {skill: 'DVB', score: 3.5},
+                    {skill: 'DBus', score: 3.5},
+                    {skill: 'UNIX IPC', score: 3},
+                ]
+            },
+            {
+                category: 'embedded',
+                skill_list: [
+                    {skill: 'BuildRoot', score: 3},
+                    {skill: 'yocto', score: 2.5},
+                    {skill: 'Genbox (Gentoo / Portage)', score: 3.5},
+                    {skill: 'ASM x86', score: 2.5},
+                    {skill: 'ASM AVR', score: 3},
+                ]
+            },
+        ];
+
+
         setup_navbar("skills", "fr");
-        $('span.stars').stars();
+        append_skills(skills_data);
+        $('.rating-loading').rating({displayOnly: true, step: 0.5});
     </script>
 
   </body>
 </html>
+
+
