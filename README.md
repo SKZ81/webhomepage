@@ -12,7 +12,7 @@ It's an enhanced *resumé* (CV) including things like:
 
 Navigation is done through a navigation bar.
 
-Two languages (english and frech) are available.
+Two languages (english and french) are available.
 
 ## how it's done ?
 
@@ -22,7 +22,9 @@ Most pages are pure static, as an exception, the skills page is generated (clien
 This listing is largely more maintenable.
 
 For each page/language combinaison, a separate file must be created, which name SHALL be in the form:
-<pagename>.<language_code>.html
+
+    <pagename>.<language_code>.html
+
 This scheme allows genrating navigation links of the navbar automatically.
 Also, adding a language should be technically easy (But need manual translation !), impliing only few modification in navbar HTML skeleton.
 
