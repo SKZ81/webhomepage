@@ -9,7 +9,7 @@
     <meta name="author" content="Johann Cahier">
     <link rel="icon" href="images/favicon.png">
 
-    <title>Johann CAHIER : Software Engineer (Embedded Linux)</title>
+    <title>Johann CAHIER: Software Engineer (Embedded Linux)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
             <div class="col-md-10 container">
                 <h2> Embedded Software Engineer at Wyplay (Marseille, France) </h2>
                 <h3> About Wyplay </h3>
-                <p> From <a href="http://www.wyplay.com/">wyplay website</a> :
+                <p> From <a href="http://www.wyplay.com/">wyplay website</a>:
                     <div class="quote">
                         <blockquote>
                             Wyplay was founded in 2006 with the vision that the new emerging media over Internet and home connected devices would completely disrupt the TV ecosystem <i>status quo</i> and that most operators didn't have the right tools to address these new convergence trends and new challengers in a timely manner.
@@ -58,20 +58,20 @@
                         </blockquote>
                     </div>
                 </p>
-                <h3> Achievements : </h3>
+                <h3> Achievements: </h3>
                 <ul>
                     <li>
-                        <u>R-Mundo</u> : named after the spannish cable operator, customer and initiator of this project. It was my "main project" ;  on which I spent most of my time in <b>Wyplay</b>, and I have been alternatively (and even sometimes, simultaneously) : Main Developper / Team Leader / Integrator...<br/>
+                        <u>R-Mundo</u>: named after the spannish cable operator, customer and initiator of this project. It was my "main project" ;  on which I spent most of my time in <b>Wyplay</b>, and I have been alternatively (and even sometimes, simultaneously): Main Developper / Team Leader / Integrator...<br/>
                         The project goal was to deliver <b>R-Mundo</b> with a <b>middleware</b> (that is, a very specific Linux distribution, without the main application called <b>User Interface</b>) for a <b>Technicolor</b>'s Set-Top-Box ; and also supporting the operator's team developping the <b>U.I.</b>...
                         <br/>
                         <a id="readmore_etherstep2" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#etherstep2_details" aria-expanded="false" aria-controls="collapseExample">Read More&nbsp&nbsp&blacktriangledown;</a>
                         <div class="collapse project-details-container" id="etherstep2_details">
                             <div class="project-details">
-                                <h3 class="project-details-title"> Ether Step 2 : A <b>middleware</b> for DCI804RMU, a Set-Top-Box from Technicolor for R-Mundo</h3>
+                                <h3 class="project-details-title"> Ether Step 2: A <b>middleware</b> for DCI804RMU, a Set-Top-Box from Technicolor for R-Mundo</h3>
                                 <h4> Context </h4>
                                 <ul>
                                     <li><a href="http://www.mundo-r.com/gl">R Mundo</a> is a Spannish Digital TV cable operator (and internet provider) in Galicia,</li>
-                                    <li><a href="http://www.technicolor.com/">Technicolor</a> was the project architect and integrator. They designed the hardware around an :
+                                    <li><a href="http://www.technicolor.com/">Technicolor</a> was the project architect and integrator. They designed the hardware around an:
                                     <li><a href="http://www.st.com">ST-micro</a> <b>7141</b>, which is nearly the same SoC than the <a href="http://www.st.com/content/st_com/en/products/digital-set-top-box-ics/legacy-products/legacy-processors/sti7105.html">sti 7105</a>, plus an <i>ad-hoc</i> "cable TCP/IP" (DOCSIS) interface,</li>
                                     <li><a href="https://dtv.nagra.com/secure/casdrm">Nagra</a> was the provider for the <b>CAS</b> (control Access System for pay TV / ciphering)</li>
                                     <li><a href="http:/www.cinfo.es/">CInfo</a> was the User Interface/Application designer and developper,</li>
@@ -83,12 +83,12 @@
                                 <h4> Achievements </h4>
                                 <p>
                                     <ul>
-                                        <li> Features Developement :
+                                        <li> Features Developement:
                                         <br/>
-                                        <b> <b>DVB</b> : </b>
+                                        <b> <b>DVB</b>: </b>
                                         <ul>
-                                            <li> Service Plan (basically : channel list) update on-the-stream : permanent, cyclic, <b>DVB</b> scan implementation, with <u>very</u> specific customer constrainsts (as a cable operator masterize his network and what he broadcasts)</li>
-                                            <li> <b>DVB</b> scan / update : test automation bench integrated in <b>Jenkins</b>. this is a complex bench, outside the skills of the validation team, as it needed :
+                                            <li> Service Plan (basically: channel list) update on-the-stream: permanent, cyclic, <b>DVB</b> scan implementation, with <u>very</u> specific customer constrainsts (as a cable operator masterize his network and what he broadcasts)</li>
+                                            <li> <b>DVB</b> scan / update: test automation bench integrated in <b>Jenkins</b>. this is a complex bench, outside the skills of the validation team, as it needed:
                                             <ul>
                                                 <li> to setup a <b>DVB</b>/<b>MPEG</b> streamer host from various pieces of hardware, including a <a href="https://www.dektec.com">Dektec</a> PCI card </li>
                                                 <li> to drive remotly the the streamer  </li>
@@ -98,19 +98,19 @@
                                             <li> <b>EPG</b> (Electronic Program Guide) query time optimisation (integrated in <a href="http://wyplay.com/frog-products.php">Frog</a>, generic product) </li>
                                             <li> BAT Update Notifications to application </li>
                                         </ul>
-                                        <b> Security : </b>
+                                        <b> Security: </b>
                                         <ul>
                                             <li> Control Access System integration validation (implied new developments/fixes) and validation </li>
                                             <li> System hardening for NASC complience (i.e. <b>Nagra</b>'s certification) </li>
                                         </ul>
                                         </li>
-                                        <li> Integration / Tweaking :
+                                        <li> Integration / Tweaking:
                                         <ul>
                                             <li> <b>HDCP</b> and <b>macrovision</b> integration (copy protection on respectively digital and analog video outputs)</li>
-                                            <li> "Frog alignment" : <i>i.e.</i> continuous-integration of latest generic components version, when/where possible </li>
+                                            <li> "Frog alignment": <i>i.e.</i> continuous-integration of latest generic components version, when/where possible </li>
                                         </ul>
                                         </li>
-                                        <li> Stability :
+                                        <li> Stability:
                                         <ul>
                                             <li> Debugging remaining mem-leak, race conditions... Leading to various random crashes.</li>
                                             <li> Auto-benching (more or less continuous evaluation of current stability)</li>
@@ -118,8 +118,8 @@
                                         </li>
                                     </ul>
                                 </p>
-                                <h4> Responsabilities : </h4>
-                                <p> Beyond my job as a developper/integrator, I also have : </p>
+                                <h4> Responsabilities: </h4>
+                                <p> Beyond my job as a developper/integrator, I also have: </p>
                                 <ul>
                                     <li> Animated a small team during about 6 month (March 2014 - September 2014), </li>
                                     <li> Been the internal and external technical referent for this project during the overall development timeline.</li>
@@ -130,8 +130,8 @@
                             </div>
                         </div>
                     </li>
-                    <li> <u>Contributions to <a href="http://wyplay.com/frog-products.php">Frog</a></u> (<b><i>NB</i></b> : the term "Frog" is namely a <i>commercial offer</i> by Wyplay, but internally speaking, it also refers to the <i>generic software base</i>) : some specific development, done for inside customer projects, are worth being backported in the latter,</li>
-                    <li>  <u>System Hardening</u> : automated file system permissions checking, against hardening requirements provided by <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.html">Cisco</a>, for a <a href="http://www.sky.it/">Sky Italia</a> product. </li>
+                    <li> <u>Contributions to <a href="http://wyplay.com/frog-products.php">Frog</a></u> (<b><i>NB</i></b>: the term "Frog" is namely a <i>commercial offer</i> by Wyplay, but internally speaking, it also refers to the <i>generic software base</i>): some specific development, done for inside customer projects, are worth being backported in the latter,</li>
+                    <li>  <u>System Hardening</u>: automated file system permissions checking, against hardening requirements provided by <a href="http://www.cisco.com/c/en/us/about/corporate-strategy-office/acquisitions/nds.html">Cisco</a>, for a <a href="http://www.sky.it/">Sky Italia</a> product. </li>
                     <li>
                         <u>Generic Feature Development</u> / Component internal architecture refactoring, to enable rendering of multiple medias at the same time.
                         <br/>
@@ -140,7 +140,7 @@
                             <div class="project-details">
                                 <h3 class="project-details-title"> Refactoring the middleware's <b>Mediarender</b> to control multiple <b>Player</b> instances </h3>
 
-                                <b>Mediarenderer</b> is the middleware's entry point for playing media (<b>UI</b> or other clients do <b><u>NOT</u></b> directly send messages to the <b>player</b>/<b>recorders</b> component). It is also a kind of abstraction (implementing an API inspired by and very close to the <a href="https://en.wikipedia.org/wiki/Universal_Plug_and_Play">UPnP</a> standards, regarding Audio/Video). The two main goals of this decoupled architecture are :
+                                <b>Mediarenderer</b> is the middleware's entry point for playing media (<b>UI</b> or other clients do <b><u>NOT</u></b> directly send messages to the <b>player</b>/<b>recorders</b> component). It is also a kind of abstraction (implementing an API inspired by and very close to the <a href="https://en.wikipedia.org/wiki/Universal_Plug_and_Play">UPnP</a> standards, regarding Audio/Video). The two main goals of this decoupled architecture are:
                                 <ul>
                                     <li> Provide a comprenhensive but <u>simple</u> API to the client (typically <b>UI</b>), hiding the details in the depth, and, </li>
                                     <li> Allow the <b>player</b> component implementation to focus on the rendering of the media itself, whereever it comes from, allowing a simple and design of this critical component, which helps to ensure a good quality and reliability.</li>
@@ -148,15 +148,15 @@
 
                                 <h3> Context </h3>
 
-                                Historically, to simplify the Mediarender's implementation, the assuption was made that only <b><u>ONE media</u></b> would be played at a given time (whatever its source, live channel or a video on USB drive), and then, only <b><u>ONE <b>player</b> instance</u></b> was needed. But, with the increasing power of processors, controlling multiple <b>player</b>'s instances became realistic, enabling features like :
+                                Historically, to simplify the Mediarender's implementation, the assuption was made that only <b><u>ONE media</u></b> would be played at a given time (whatever its source, live channel or a video on USB drive), and then, only <b><u>ONE <b>player</b> instance</u></b> was needed. But, with the increasing power of processors, controlling multiple <b>player</b>'s instances became realistic, enabling features like:
                                 <ul>
-                                    <li> <u>Mozaic</u> (wanted by <b>Sky Italia</b>) : by displaying multiple channels on screen at the same time (before, operators had to generate mozaic stream on the backend and stream it on a dedicated channel),</li>
-                                    <li> <u>Fast Zapping</u> (wanted by <b>Canal+</b>) : a number of channels (typically : previous and next but it's not limitative and a client/<b>U.I.</b> choice) are <b>preloaded</b>, meaning all the rendering chain is running for each of those channel, but they're not displayed on screen. When zapping (typically using "Progam +/-" keys) on a preloaded channel, mediarenderer just switch the displayed channel, drastically optimizing the latency.</li>
+                                    <li> <u>Mozaic</u> (wanted by <b>Sky Italia</b>): by displaying multiple channels on screen at the same time (before, operators had to generate mozaic stream on the backend and stream it on a dedicated channel),</li>
+                                    <li> <u>Fast Zapping</u> (wanted by <b>Canal+</b>): a number of channels (typically: previous and next but it's not limitative and a client/<b>U.I.</b> choice) are <b>preloaded</b>, meaning all the rendering chain is running for each of those channel, but they're not displayed on screen. When zapping (typically using "Progam +/-" keys) on a preloaded channel, mediarenderer just switch the displayed channel, drastically optimizing the latency.</li>
                                 </ul>
 
                                 <h3> Workload </h3>
 
-                                This implied modifications at multiple levels :
+                                This implied modifications at multiple levels:
                                 <ul>
                                     <li> Interprocess Communication API (on <b>DBus</b>) </li>
                                     <li> on the <b>player</b> itself </li>
@@ -166,7 +166,7 @@
 
                                 <h3> Achievements </h3>
 
-                                Mananing the <b>player</b> instances was pretty straigthforward ; the main complexity was about the recorders, how they bind (and detach) to <b>player</b> instances. Then my task were :
+                                Mananing the <b>player</b> instances was pretty straigthforward ; the main complexity was about the recorders, how they bind (and detach) to <b>player</b> instances. Then my task were:
                                 <ul>
                                     <li> <u>Analyse</u> the full <b>mediarender</b> code (I had only a partial knowledge of it before) </li>
                                     <li> <u>Propose</u> a refactored architecture for the component to the team (and to the maintener of <b>mediarender</b>), detailled as UML class and sequence diagrams </li>
@@ -191,7 +191,7 @@
                 <h2> <i>Ingénieur d'&#x00C9;tudes</i> at Alten (Rennes, France)</h2>
                 <h3> Alten's Software Developmet Center </h3>
                 <p>
-                The <b>S.D.C.</b> was a division of <b>Alten Rennes</b>, which was aimed to provide a comptetive external consulting service (Technical Assistance), compared to <b>Alcatel</b>'s indian subsidiaries. The arguments were :
+                The <b>S.D.C.</b> was a division of <b>Alten Rennes</b>, which was aimed to provide a comptetive external consulting service (Technical Assistance), compared to <b>Alcatel</b>'s indian subsidiaries. The arguments were:
                     <ul>
                         <li>Same langage (French) for a better communication</li>
                         <li>Geographic Proximty (Rennes to Nantes)</li>
@@ -220,7 +220,7 @@
                 <p>
                     <ul>
                         <li>
-                            <b><i>France Télécom Ticket Téléphone</i></b> : a simple prepaid service for fixed network
+                            <b><i>France Télécom Ticket Téléphone</i></b>: a simple prepaid service for fixed network
                             <br/>
                             <a id="readmore_FTTT" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#FTTT_details" aria-expanded="false" aria-controls="collapseExample">Read More&nbsp&nbsp&blacktriangledown;</a>
                             <div class="collapse project-details-container" id="FTTT_details">
@@ -235,7 +235,7 @@
                             </div>
                         </li>
                         <li>
-                            <b>Community Mobilty Manager</b> : porting services to new hardware.
+                            <b>Community Mobilty Manager</b>: porting services to new hardware.
                             <br/>
                             <a id="readmore_CMM" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#CMM_details" aria-expanded="false" aria-controls="collapseExample">Read More&nbsp&nbsp&blacktriangledown;</a>
                             <div class="collapse project-details-container" id="CMM_details">
@@ -247,7 +247,7 @@
                             </div>
                         </li>
                         <li>
-                            <b>CSTA Session Manager</b> : an ECN module designed and coded from scratch by the SDC.
+                            <b>CSTA Session Manager</b>: an ECN module designed and coded from scratch by the SDC.
                             <br/>
                             <a id="readmore_CSTA" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#CSTA_details" aria-expanded="false" aria-controls="collapseExample">Read More&nbsp&nbsp&blacktriangledown;</a>
                             <div class="collapse project-details-container" id="CSTA_details">
@@ -259,7 +259,7 @@
                             </div>
                         </li>
                         <li>
-                            <b>SDC-Payment</b> : Planning and overseeing night operations
+                            <b>SDC-Payment</b>: Planning and overseeing night operations
                             <br/>
                             <a id="readmore_SDCP" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#SDCP_details" aria-expanded="false" aria-controls="collapseExample">Read More&nbsp&nbsp&blacktriangledown;</a>
                             <div class="collapse project-details-container" id="SDCP_details">
