@@ -41,7 +41,7 @@
 
     <div id=navbar></div> <!-- placeholder -->
 
-    <a id="rating_legend_button" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#rating_legend" aria-expanded="false" aria-controls="collapseExample">Légende des notes &blacktriangledown;</a>
+    <a id="rating_legend_button" role="button" class="btn btn-info btn-sm" data-toggle="collapse" href="#rating_legend" aria-expanded="false" aria-controls="collapseExample">Légende des notes&nbsp&nbsp&blacktriangledown;</a>
     <div class="collapse legend-container" id="rating_legend">
         <div class="legend container">
             <div class="row">
@@ -81,7 +81,7 @@
                     <input class="rating rating-loading" data-size="xs" value="5">
                 </div>
                 <div class="col-md-8">
-                    <h4 class="legend-title">Gourou :</h4> Serait Bjarne Stroustrup pour le C++ (ou un autre membre du "C++ comittee").
+                    <h4 class="legend-title">Gourou :</h4> Serait Bjarne Stroustrup pour le C++ (ou un autre membre du &laquo; <a href="https://isocpp.org/wiki/faq/wg21"><i>C++ comittee</i></a> &raquo;).
                 </div>
             </div>
         </div>
@@ -167,12 +167,12 @@
 
     <script type="text/javascript">
         $('#rating_legend').on('hidden.bs.collapse', function () {
-            $('#rating_legend_button').html("Légende des notes &blacktriangledown;");
+            $('#rating_legend_button').html("Légende des notes&nbsp&nbsp&blacktriangledown;");
         })
         $('#rating_legend').on('shown.bs.collapse', function () {
-            $('#rating_legend_button').html('Légende des notes &blacktriangle;')
+            $('#rating_legend_button').html('Légende des notes&nbsp&Cross;')
         })
-        $('#rating_legend_button').html("Légende des notes &blacktriangledown;");
+        $('#rating_legend_button').html("Légende des notes&nbsp&nbsp&blacktriangledown;");
 
         var skills_data = [
             {
