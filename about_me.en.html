@@ -9,7 +9,7 @@
     <meta name="author" content="Johann Cahier">
     <link rel="icon" href="images/favicon.png">
 
-    <title>Johann CAHIER : Software Engineer (Embedded Linux)</title>
+    <title>Johann CAHIER: Software Engineer (Embedded Linux)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,30 +41,33 @@
     <div class="container">
 
       <div>
-        <h1>ABOUT ME</h1>
-
-        <h2>Hobbies </h2>
-        <p>Right now I'm mainly in QuadCopter building.</p>
-        <p>I choose the hard way about the software : while I ordered an hardware frame nearly ready-to-fly,</p>
-        <p>I started to build my own Flight Controller all by myself, starting from an Arduino hardware (I mean, using those 8bit Atmel's <b>AVR</b> CPU as the main CPU).</p></br>
-        <p>Other implied components are Inertia Measurement Units (gyroscope, acceleroscope, magnetoscope), and a pression sensor as an altimeter.</p>
-        <p>Flying in 8bits is not a goal by itself, but creating a robot controller using an <b>AVR</b> was one.</p>
-        <p>I am currently implementing One Shot 125 as an output signal from the flight controller i'm intending to build</p>
-        <p>I am usig simulators (Atmel Studio, SimulAvr, simavr) and i'm trying to find out a way to automize non-regression test using one of them.</p>
-        <h2>Values </h2>
+        <h2>Values</h2>
+        <p>Here is the list of values (qualities) that I believe in. I'm convinced they are needed to reach success in our projects (and, at least, to setup a good and pleasant, then productive, working environment):</p>
         <ul>
             <li>Knowledge sharing,</li>
-            <li>Sincerity, Transparency,</li>
-            <li>Being helpful, giving a hand,</li>
-            <li>Avoiding Negativity,</li>
-            <li>All devoted to Reaching Success.</li>
+            <li>Sincerity / Transparency,</li>
+            <li>Helpfulness,</li>
+            <li>Positiveness.</li>
         </ul>
-        <h2>Centers of interest</h2>
-        <p>I have interest in many scientific domains, but not exclusively hi-tech or hard-science ones.
-        For instance, I have a strong intrest in botany and I practice gardening, growing mainly vegetables, and also some flower, for my own pleasure.
-        By the way, mineral and bio-chemestry are some topic of interest for me !</p>
-        <p>And also, I like to get deep sometimes and think about Einstein or Carl Jung, and old Sci-Fi movies I liked to see...</p>
-        <p>Or even listen some good music, sit down, enjoy, and relax...</p>
+
+        <h2>Hobbies </h2>
+        <h3>Freetime projects</h3>
+        <ul>
+            <li><b>Quadcopter building</b>: starting from a hardware kit (frame, motors, propellers, and so on) and after assembling it (which required to fix various problem due to neglectful chineese providers) the project is to realise an autonomus fly controller, based on an <b>AVR</b> microcontroller, as a first step. It is "minimalistic", a kind of <i>proof-of-concept</i> that one can do basic autonomous flight, in 8-bit, with very few RAM space.</li>
+            <li><b>openPowerSwitch</b>: the goal is to reproduce the features of an existing product I was using in Wyplay. a "power switch" is a multi-socket mains extension, which allows to control remotely and individually each outlet it holds through the network, using HTTP requests. The <b>AVR</b> microcontroller is wired to relays (one per outlet) to switch 220V AC, and to an ethernet/RJ45 interface for the network part. On the software side, I use <a href="https://pdfs.semanticscholar.org/3413/7ccad5ff56c720edd144da542c392279df96.pdf">uip</a> (micro-IP), a tiny but full-featured IP stack written by <a href="http://dunkels.com/adam/software.html">Adam Dunkels</a>. This project is also a chance (not done yet) to get into CAD software: <a href="https://www.freecadweb.org">freeCAD</a> to design the casing (absolutely needed because of the 220VAC) and <a href="http://kicad-pcb.org">kicad</a>, to maybe produce my own PCB design.</li>
+            <li><b>Automatic watering system:</b> feeding water to potted vegetable and/or flowers. It implies sensors to detect the water needing, a pump, a tank, and so on. Nowadays I only played around with mouisture sensor, and found out they are not that accurate. I'm considering measuring total weight also (or instead), to deduced amout of evaporated water.</li>
+            <li><b>media "TV" box</b>: integrating <a href="https://kodi.tv">kodi</a> on a raspberry pi, to be able to play various media, especially from the internet, from streaming sites (like <a href="https://www.youtube.com">Youtube</a>), or IP TV channels (like <a href="https://www.arte.tv/fr/guide/">ARTE+7</a>)... I started this project because internet subscription is much more expensive in Belgium than in France. Indeed, I subscribed to a "naked" connection, without TV channels offer ; but I wanted to be able to browse contents, launch a medias or change the settings (like sound volume)... With a nice "10-feet interface", and without having to grab mouse and keyboard thanks to a dedicated Remote Control Unit.</li>
+            <li><b>Writing articles</b>: on my <a href="https://skz81.wordpress.com/">technical blog</a>, about various tests, tries, and small tinkering I do.</li>
+        </ul>
+
+        <h3>Other hobbies</h3>
+        <ul>
+            <li><b>Gardening</b>: mainly, i like to to grow my own home-made and organic vegetables,</li>
+            <li><b>D-Jing</b>: digitally, <i>i.e.</i> using a computer wired to a MIDI / USB controller, and <a href="https://www.mixxx.org">mixxx</a> as the software (Free &amp; Open-Source).</li>
+            <li><b>Scientific inquisitiveness</b>: reading (or watching videos) about various topics:  Quatum physics and relativity, biology (mainly cellular biochemistry and brain mecanisms), archeology, or even epistemology and philosophy of science... This is a non-exhaustive list !</li>
+            <i>And the obvious, classical:</i>
+            <li><b>Hanging around with friends</b>, drinking some beers :)...</li>
+        </ul>
       </div>
 
     </div><!-- /.container -->

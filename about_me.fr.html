@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -10,7 +9,7 @@
     <meta name="author" content="Johann Cahier">
     <link rel="icon" href="images/favicon.png">
 
-    <title>Johann CAHIER : Ingénieur Développement (Linux Embarqué)</title>
+    <title>Johann CAHIER : Software Engineer (Embedded Linux)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,28 +41,33 @@
     <div class="container">
 
       <div>
-        <h1>A PROPOS DE MOI....</h1>
-
-        <h2>Hobbies </h2>
-        <p>Actuellement je suis occupé à construire un quadcopter.
-        </br>
-        <p>J'ai choisi la voie dure pour le logiciel, alors que j'ai choisi d'acheter une "maquette" prête à voler pour le matériel.</p>
-        <p>J'ai ensuite choisi de construite mon contrôlleur de vol par moi-même, en utilisant comme base un AVR (un microcontrolleur présent dans les cartes Arduino par exemple).
-        Le quadcopter nécessite dautres composants, comme une centrale de mesure inertielle (numérique !), et un barométre, utilisé comme altimètre.</p>
-        </br>
-        <p>Voler en 8-but n'est pas un but en soit, mais créer un controlleur de robot à base de composants de conception minimale est un challenge exitant</p>
-        <p>Actuellement, j'implémente le protocole one shot 125</b>
-        <p>Afin de ce faire, j'utilise des simulateurs (Atmel Studio, SimulAvr, simavr) et j'essaye de déterminer comment mettre en place des tests de non-regression grâce à l'un d'entre eux.</p>
-        <h2>Valeurs </h2>
+        <h2>Valeurs</h2>
+        <p>Voici les valeurs (ou qualités) en lesquelles je crois. Je suis convaincu qu'elles sont nécessaires pour atteindre le succès dans nos projets (et tout du moins, pour mettre en place un environnement de travail plaisant et donc productif) :</p>
         <ul>
-            <li>Partage des conaissances,</li>
-            <li>Sincérité et transparence,</li>
-            <li>Être serviable, rendre service,</li>
-            <li>PO-SI-TI-VER,</li>
+            <li>Partage des connaissances,</li>
+            <li>Sincérité / Transparence,</li>
+            <li>Entre-aide,</li>
+            <li>Positivisme.</li>
         </ul>
-        <h2>Centres d'intérêt</h2>
-        <p>J'ai une passion pour tout ce qui est scientifique... Mais pas exclusivement. Je m'intéresse beaucoup à la botanique mais donc aussi au jardinage ! Que je pratique, qu'il soit question de légume ou de fleurs, pour mon plaisir personnel...</p>
-        <p>Je consacre aussi mon temps libre à essayer de percer les secrets de l'astrophysique... En lisant des revues et en tapant dans l'pot.</p>
+
+        <h2>Loisirs </h2>
+        <h3>Projets personnels</h3>
+        <ul>
+            <li><b>Construction d'un quadcopter</b> : en partant d'un kit contentant les divers éléments matériels nécessaires (structure, moteurs, hélices, etc), et après l'avoir assemblé (ce qui a nécessité de régler certains problèmes dûs à des fournisseurs chinois peu rigoureux) le projet consiste à réaliser un contrôleur de vol autonome, basé sur un microcontrôleur <b>AVR</b>, du moins dans un premier temps. Ceci est un peu &laquo; minimaliste &raquo;, une sorte de <i>proof-of-concept</i>, démontrant qu'il est possible d'effectuer des manoeuvres basiques autonomes, et ce en 8-bit, avec très peu d'espace RAM disponible.</li>
+            <li><b>openPowerSwitch</b> : le but ici est de reproduire les fonctionnalités d'un produit existant, que j'utilisais à Wyplay. Un &laquo; <i>power switch</i> &raquo; est un genre de multiprise, dont chaque sortie peut-être contrôllée à distance depuis le réseau, en envoyant des requêtes HTTP. Le microcontrôleur <b>AVR</b> est branché sur des relais (un par prise de sortie) pour commuter le courant alternatif 220V, et à une interface ethernet/RJ45 pour la partie réseau. Côté logiciel, j'utilise <a href="https://pdfs.semanticscholar.org/3413/7ccad5ff56c720edd144da542c392279df96.pdf">uip</a> (micro-IP), une <i>stack</i> IP de taille réduite, mais présentant néanmioins toutes les fonctionnalités requises, écrite par <a href="http://dunkels.com/adam/software.html">Adam Dunkels</a>. Ce projet est également l'occasion de m'essayer aux logiciels de conception assisté par ordinateur (CAD) : <a href="https://www.freecadweb.org/?lang=fr">freeCAD</a> pour la conception du boitier (absolument nécessaire ici, à cause du 220V) et <a href="http://kicad-pcb.org">kicad</a>, pour, éventuellement, concevoir et produire la carte électronique (PCB).</li>
+            <li><b>Système d'arrosage automatique :</b> permettant de fournir en eau des plantes en pot (fleurs et/ou légumes). Cela nécessite de mettre en place des capteurs, afin de détecter les besoins, une pompe, un réservoir, etc. A l'heure où j'écris ces lignes, j'ai simplement testé les senseurs d'humidité, et ne les ai pas trouvé particulièrement précis (donc fiables). J'envisage d'utiliser (conjointement, ou à la place) une pesée de l'ensemble des pots, afin de déduire la quantité d'eau évaporée.</li>
+            <li><b>Boitier "Télé" et médias</b> : il s'agit d'intégrer <a href="https://kodi.tv">kodi</a> sur un Raspberry Pi, afin de pouvoir jouer divers médias, essentiellement sur internet, depuis des sites de <i>streaming</i> (comme <a href="https://www.youtube.com">Youtube</a>), ou des chaines IP TV (comme <a href="https://www.arte.tv/fr/guide/">ARTE+7</a>)... Je me suis lancé dans ce projet à cause des abonnement internet beaucoup plus cher en Belgique qu'en France. En effet j'ai du coup choisi de souscrire à une connexion internet &laquo; nue &raquo;, sans offre de chaine de TV. Néanmoins, je voulais pouvoir naviguer dans les contenus, lancer la lecture, changer des réglages (son, etc) directement sur la télé de mon salon, via une télécommande, sans avoir à passer par le clavier et la souris.</li>
+            <li><b>Rédaction d'articles</b> sur mon <a href="https://skz81.wordpress.com/">blog technique</a> : au sujet de divers tests, essais ou de petits bricolages que je réalise.</li>
+        </ul>
+
+        <h3>Autres loisirs</h3>
+        <ul>
+            <li><b>Jardinage</b> : principalement, j'aime faire pousser mes propres légumes, faits-maison et bios.</li>
+            <li><b>D-Jing</b> : numériquement, <i>i.e.</i> grâce à l'utilisation d'un ordinateur branché à un controlleur MIDI / USB, et l'utilisation du logiciel <a href="https://www.mixxx.org">mixxx</a> (open-source, libre et gratuit).</li>
+            <li><b>Curiosité scientifique</b> que je sastisfais par la lecture, ou le visionnage de vidéos, sur des sujets variés : la physique quantique et la relativité, la biologie (notamment la biochimie cellulaire et les mécanismes cérébraux), l'archéologie, ou encore épistémologie et la phiolosophie des sciences... Mais la liste n'est pas exhaustive !</li>
+            <i>Et évidemment le classique :</i>
+            <li><b>Sortir avec des amis</b>, aller boire une bière :)...</li>
+        </ul>
       </div>
 
     </div><!-- /.container -->
