@@ -5,7 +5,7 @@ var languages=['en', 'fr']
 
 
 function setup_navbar(currentPage, language /* TODO : rather read html node 'lang' attribute */) {
-    $("#navbar").load("navbar.html", function() {
+    $("#navbar").load("navbar." + language + ".html", function() {
         // code to be executed as a CALLBACK, once loaded
         $("#lang_flag_indicator").attr("lang", language);
         menu_items.forEach(function(item) {
